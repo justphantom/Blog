@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JustPhantom</title>
+    <link>https://justphantom.github.io/</link>
+    <description>Recent content on JustPhantom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Sep 2019 17:48:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://justphantom.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>便携版 Emacs</title>
+      <link>https://justphantom.github.io/post/portable-emacs/</link>
+      <pubDate>Mon, 16 Sep 2019 17:48:30 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/portable-emacs/</guid>
+      <description> 下载Emacs 访问 Emacs镜像FTP，选择对应的版本下载。
+解压缩 Emacs 将压缩包解压到本地路径，如 D:\Emacs；
+运行 D:\Emacs\bin\runemacs.exe；
+保存配置，然后退出。
+在主目录新建 home 文件夹，如 D:\Emacs\home；
+进入 site-lisp 文件夹，如 D:\Emacs\share\emacs\26.3\site-lisp；
+创建 site-start.el 文件，内容如下：
+(defvar usb-drive-letter (substring data-directory 0 -4)) (defvar usb-home-dir (concat usb-drive-letter &amp;quot;home/&amp;quot;)) (setenv &amp;quot;HOME&amp;quot; usb-home-dir)	 再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\home 之中；
+默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下；
+完成 绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\home 中了。
+ 引用：windows下完全绿化的Emacs编辑环境（How to get a portable Emacs？）
+ </description>
+    </item>
+    
+    <item>
+      <title>中秋节</title>
+      <link>https://justphantom.github.io/post/zhong-qiu-jie/</link>
+      <pubDate>Wed, 11 Sep 2019 23:46:25 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/zhong-qiu-jie/</guid>
+      <description>中天何处不月明
+秋风未解思乡情
+佳期将至心难静
+节来当归旧园庭</description>
+    </item>
+    
+  </channel>
+</rss>
