@@ -6,10 +6,24 @@
     <description>Recent content on JustPhantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Sep 2019 17:48:30 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2019 10:51:30 +0800</lastBuildDate>
     
 	<atom:link href="https://justphantom.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>便携版 gVim</title>
+      <link>https://justphantom.github.io/post/portable-vim/</link>
+      <pubDate>Tue, 17 Sep 2019 10:51:30 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/portable-vim/</guid>
+      <description>下载gVim 访问 Vim 官网下载页面；
+下载 GUI executable 压缩包，比如 gvim81.zip；
+解压缩gVim 解压缩到本地路径，如 D:\Vim；
+进入 D:\Vim 可以看到里面有 子目录 vim81，其中包含了gVim 的主程序 gvim.exe，此时先不运行它；
+在 D:\Vim 目录下新建一个文本文件，文件名为 .vimrc；这个是 gVim 的配置文件，根据自己的需求编辑该文件，也可先不编辑；
+运行 D:\Vim\vim81\gvim.exe 即可。</description>
+    </item>
     
     <item>
       <title>便携版 Emacs</title>
