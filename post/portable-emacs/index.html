@@ -10,13 +10,13 @@
     <meta name="description" content=" 下载Emacs 访问 Emacs镜像FTP，选择对应的版本下载，如 emacs-26.3-x86_64。
 解压缩 Emacs 将压缩包解压到本地路径，如 D:\Emacs；
 运行 D:\Emacs\bin\runemacs.exe；
-保存配置，然后退出。
-在主目录新建 home 文件夹，如 D:\Emacs\home；
+保存配置，然后退出；
+新建 home 文件夹，如 D:\Emacs\share\emacs\26.3\home；
 进入 site-lisp 文件夹，如 D:\Emacs\share\emacs\26.3\site-lisp；
 创建 site-start.el 文件，内容如下：
-(defvar usb-drive-letter (substring data-directory 0 -4)) (defvar usb-home-dir (concat usb-drive-letter &quot;home/&quot;)) (setenv &quot;HOME&quot; usb-home-dir)	 再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\home 之中；
-默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下；
-完成 绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\home 中了。
+(defvar usb-drive-letter (substring data-directory 0 -4)) (defvar usb-home-dir (concat usb-drive-letter &quot;home/&quot;)) (setenv &quot;HOME&quot; usb-home-dir)	 再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\share\emacs\26.3\home 之中；
+默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下。
+完成 绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\share\emacs\26.3\home 中了。
  引用：windows下完全绿化的Emacs编辑环境（How to get a portable Emacs？）
  ">
     <meta name="author" content="">
@@ -62,9 +62,9 @@
 
 <p>运行 D:\Emacs\bin\runemacs.exe；</p>
 
-<p>保存配置，然后退出。</p>
+<p>保存配置，然后退出；</p>
 
-<p>在主目录新建 home 文件夹，如 D:\Emacs\home；</p>
+<p>新建 home 文件夹，如 D:\Emacs\share\emacs\26.3\home；</p>
 
 <p>进入 site-lisp 文件夹，如 D:\Emacs\share\emacs\26.3\site-lisp；</p>
 
@@ -75,13 +75,13 @@
 (setenv &quot;HOME&quot; usb-home-dir)	
 </code></pre>
 
-<p>再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\home 之中；</p>
+<p>再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\share\emacs\26.3\home 之中；</p>
 
-<p>默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下；</p>
+<p>默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下。</p>
 
 <h2 id="完成">完成</h2>
 
-<p>绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\home 中了。</p>
+<p>绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\share\emacs\26.3\home 中了。</p>
 
 <blockquote>
 <p>引用：<a href="https://blog.csdn.net/kuangdash/article/details/38298185" target="_blank">windows下完全绿化的Emacs编辑环境（How to get a portable Emacs？）</a></p>
