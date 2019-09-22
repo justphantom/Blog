@@ -105,9 +105,10 @@ M-&lt;chr&gt;  表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 A
 <p>如果你的键盘上有 PageUp 和 PageDn，也可以用这两个键来滚屏。不过使用 C-v 和 M-v 的效率要更高一些。</p>
 
 <ul>
-<li>基本的光标控制（BASIC CURSOR CONTROL）
-&mdash;</li>
+<li>基本的光标控制（BASIC CURSOR CONTROL）</li>
 </ul>
+
+<hr />
 
 <p>整屏的移动很有用，但是如何在文字中精确定位呢？</p>
 
@@ -267,9 +268,10 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>如果你的鼠标有滚轮的话，你也可以使用滚轮来滚动。</p>
 
 <ul>
-<li>如果 EMACS 失去响应（IF EMACS STOPS RESPONDING）
-&mdash;&mdash;&mdash;-</li>
+<li>如果 EMACS 失去响应（IF EMACS STOPS RESPONDING）</li>
 </ul>
+
+<hr />
 
 <p>如果 Emacs 对你的命令失去响应，你可以用 C-g 来安全地终止这条命令。C-g 也可以终止一条执行过久的命令。</p>
 
@@ -287,9 +289,10 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
   取消 &lt;ESC&gt; 的正确做法是再连按两次 &lt;ESC&gt;。】</p>
 
 <ul>
-<li>被禁用的命令（DISABLED COMMANDS）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>被禁用的命令（DISABLED COMMANDS）</li>
 </ul>
+
+<hr />
 
 <p>有一些 Emacs 命令被“禁用”了，以避免初学者在不了解其确切功能的情况下误用而造成麻烦。</p>
 
@@ -305,9 +308,10 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </blockquote>
 
 <ul>
-<li>窗格（WINDOWS）
-&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>窗格（WINDOWS）</li>
 </ul>
+
+<hr />
 
 <p>Emacs 可以有多个“窗格”，每个窗格显示不同的文字。后面会介绍怎么对付多个窗格，现在我们先学会如何关掉多余的窗格。其实也很简单：</p>
 
@@ -329,9 +333,10 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>有一系列命令是以 CONTROL-x 开始的，这些命令许多都跟“窗格、文件、缓冲区【缓冲区（buffer）会在后文详细介绍】”等等诸如此类的东西有关，其中有些命令可能包含了 2 个、3 个或者 4 个字符。</p>
 
 <ul>
-<li>插入与删除（INSERTING AND DELETING）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>插入与删除（INSERTING AND DELETING）</li>
 </ul>
+
+<hr />
 
 <p>插入文字很简单，直接敲键盘就可以了。普通的字符，比如 A、7、* 等等，会随着你的输入而插入。要插入一个换行符，输入 &lt;Return&gt;（这个键在键盘上有时会被标注成“Enter”）。</p>
 
@@ -496,9 +501,10 @@ C-y 就可以把它们都召回。</p>
 </blockquote>
 
 <ul>
-<li>撤销（UNDO）
-&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>撤销（UNDO）</li>
 </ul>
+
+<hr />
 
 <p>如果你修改了一段文字，又觉得改得不好，可以用 undo 命令进行撤销：C-/。</p>
 
@@ -523,9 +529,10 @@ C-/，你会把以前的命令也依次撤销。</p>
 <p>数字参数对于 C-/ 、 C-_ 和 C-x u 的意义是执行撤销的重复次数。</p>
 
 <ul>
-<li>文件（FILE）
-&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>文件（FILE）</li>
 </ul>
+
+<hr />
 
 <p>想保存工作成果就要记得存盘，否则一旦退出 Emacs 你编辑的文字就会丢失。要
 存盘，就要在编辑前“寻找”到一个存盘文件。（这个过程通常也被称为“访问”
@@ -592,9 +599,10 @@ C-/，你会把以前的命令也依次撤销。</p>
 已有文件没有区别了。</p>
 
 <ul>
-<li>缓冲区（BUFFER）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>缓冲区（BUFFER）</li>
 </ul>
+
+<hr />
 
 <p>你可以用 C-x C-f 找到并打开第二个文件，但第一个文件仍然在 Emacs 中。要
 切回第一个文件，一种办法是再用一次 C-x C-f。这样，你就可以在 Emacs 中同
@@ -673,9 +681,10 @@ C-x C-f 是一种办法。不过还有一个更简单的办法，那就是用 C-
 </blockquote>
 
 <ul>
-<li>命令集扩展（EXTENDING THE COMMAND SET）
-&mdash;-</li>
+<li>命令集扩展（EXTENDING THE COMMAND SET）</li>
 </ul>
+
+<hr />
 
 <p>Emacs 的命令就像天上的星星，数也数不清。把它们都对应到 CONTROL 和 META
 组合键上显然是不可能的。Emacs 用扩展（eXtend）命令来解决这个问题，扩展
