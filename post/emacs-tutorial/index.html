@@ -49,10 +49,10 @@ C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。 因此 
 
 <p>Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：</p>
 
-<pre><code>C-&lt;chr&gt;  表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
+<pre><code>C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
     因此 C-f 就表示：按住 CONTROL 键再输入 f。
 
-M-&lt;chr&gt;  表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
+M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
     如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：
     先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。
 </code></pre>
@@ -87,10 +87,10 @@ M-&lt;chr&gt;  表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 A
 
 <p>以下命令在翻页浏览时相当有用：</p>
 
-<pre><code>    C-v     向前移动一屏
-    M-v     向后移动一屏
-    C-l     重绘屏幕，并将光标所在行置于屏幕的中央
-            （注意是 CONTROL-L，不是 CONTROL-1）
+<pre><code>    C-v 向前移动一屏
+    M-v 向后移动一屏
+    C-l 重绘屏幕，并将光标所在行置于屏幕的中央
+    （注意是 CONTROL-L，不是 CONTROL-1）
 </code></pre>
 
 <blockquote>
@@ -105,10 +105,9 @@ M-&lt;chr&gt;  表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 A
 <p>如果你的键盘上有 PageUp 和 PageDn，也可以用这两个键来滚屏。不过使用 C-v 和 M-v 的效率要更高一些。</p>
 
 <ul>
-<li>基本的光标控制（BASIC CURSOR CONTROL）</li>
+<li>基本的光标控制（BASIC CURSOR CONTROL）
+&mdash;</li>
 </ul>
-
-<hr />
 
 <p>整屏的移动很有用，但是如何在文字中精确定位呢？</p>
 
@@ -203,20 +202,20 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <p>这里对简单的光标移动命令做一个总结，其中也包括了整词和整句的移动：</p>
 
-<pre><code>    C-f     向右移动一个字符
-    C-b     向左移动一个字符
+<pre><code>    C-f 向右移动一个字符
+    C-b 向左移动一个字符
 
-    M-f     向右移动一个词【对中文是移动到下一个标点符号】
-    M-b     向左移动一个词【对中文是移动到上一个标点符号】
+    M-f 向右移动一个词【对中文是移动到下一个标点符号】
+    M-b 向左移动一个词【对中文是移动到上一个标点符号】
 
-    C-n     移动到下一行
-    C-p     移动到上一行
+    C-n 移动到下一行
+    C-p 移动到上一行
 
-    C-a     移动到行首
-    C-e     移动到行尾
+    C-a 移动到行首
+    C-e 移动到行尾
 
-    M-a     移动到句首
-    M-e     移动到句尾
+    M-a 移动到句首
+    M-e 移动到句尾
 </code></pre>
 
 <blockquote>
@@ -399,14 +398,14 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>好，现在你应该已经掌握了最基本的的文本插入和修改功能，其实删除还可以
 “以词为单位”进行，下面是一个关于“删除”操作的小结：</p>
 
-<pre><code>    &lt;DEL&gt;        删除光标前的一个字符
-    C-d          删除光标后的一个字符
+<pre><code>    &lt;DEL&gt;   删除光标前的一个字符
+    C-d 删除光标后的一个字符
 
-    M-&lt;DEL&gt;      移除光标前的一个词
-    M-d          移除光标后的一个词
+    M-&lt;DEL&gt; 移除光标前的一个词
+    M-d 移除光标后的一个词
 
-    C-k          移除从光标到“行尾”间的字符
-    M-k          移除从光标到“句尾”间的字符
+    C-k 移除从光标到“行尾”间的字符
+    M-k 移除从光标到“句尾”间的字符
 </code></pre>
 
 <p>【可能你已经注意到了“删除（delete）”和“移除（kill）”的用词区别，后
@@ -552,7 +551,7 @@ C-/，你会把以前的命令也依次撤销。</p>
 <p>寻找文件的命令有一个特点，那就是你必须给出文件名。我们称这个命令“读入
 了一个参数”（在这里，这个参数显然就是文件名）。在你输入这条命令之后：</p>
 
-<pre><code>    C-x C-f   寻找一个文件
+<pre><code>    C-x C-f 寻找一个文件
 </code></pre>
 
 <p>Emacs 会提示你输入文件名。你输入的文件名会出现在屏幕最底端的一行，这一
@@ -574,20 +573,20 @@ C-/，你会把以前的命令也依次撤销。</p>
 
 <p>文件被显示在了屏幕上，你可以开始编辑了。存盘用这条命令：</p>
 
-<pre><code>    C-x C-s   储存这个文件
+<pre><code>    C-x C-s 储存这个文件
 </code></pre>
 
 <p>这条命令把 Emacs 中的文字存储到文件中。第一次存盘的时候 Emacs 会将原文
 件重命名以备份。重命名的规则通常是在原文件名之后添加一个“~”字符。
 【对许多人来说，这是一个烦人的特性，关掉文件备份可以用如下命令：
-  M-x customize-variable <Return> make-backup-files <Return>】</p>
+  M-x customize-variable &lt;Return&gt; make-backup-files &lt;Return&gt;】</p>
 
 <p>存盘结束后，Emacs 会显示写入文件的文件名。你最好养成经常存盘的习惯，这
 可以减少系统崩溃和死机给你带来的损失（也可参见下面的“自动保存”一节）。</p>
 
 <blockquote>
 <blockquote>
-<p>输入 C-x C-s TUTORIAL.cn <Return> 。
+<p>输入 C-x C-s TUTORIAL.cn &lt;Return&gt; 。
    这将会把该指南保存为一个名为 TUTORIAL.cn 的文件，并且在屏幕的下方显
    示一条消息：“Wrote &hellip;TUTORIAL.cn”。</p>
 </blockquote>
@@ -724,7 +723,7 @@ C-x C-f 是一种办法。不过还有一个更简单的办法，那就是用 C-
 replace-string（字符串替换）这个命令，它会把一个字符串替换成另一个。在
 输入 M-x 之后，Emacs 会在屏幕底端向你询问并等待你输入命令名。如果你想
 输入“replace-string”，其实只需要敲“repl s<TAB>”就行了，Emacs 会帮你自
-动补齐。输入完之后按 <Return> 提交。</p>
+动补齐。输入完之后按 &lt;Return&gt; 提交。</p>
 
 <p>字符串替换命令需要两个参数――被替换的字符串和用来替换它的字符串。每个
 参数的输入都以换行符来结束。</p>
@@ -732,7 +731,7 @@ replace-string（字符串替换）这个命令，它会把一个字符串替换
 <blockquote>
 <blockquote>
 <p>将光标移到本行下面第二行的空白处，然后输入
-   M-x repl s<Return>changed<Return>altered<Return>。</p>
+   M-x repl s&lt;Return&gt;changed&lt;Return&gt;altered&lt;Return&gt;。</p>
 </blockquote>
 </blockquote>
 
@@ -743,9 +742,10 @@ replace-string（字符串替换）这个命令，它会把一个字符串替换
 论它在哪里出现――全部用“altered”替换掉了。</p>
 
 <ul>
-<li>自动保存（AUTO SAVE）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>自动保存（AUTO SAVE）</li>
 </ul>
+
+<hr />
 
 <p>如果你已经修改了一个文件，但是还没来得及存盘你的计算机就罢工了，那么你
 所做的修改就很可能会丢失。为了避免这样的不幸发生，Emacs 会定期将正在编
@@ -758,17 +758,19 @@ replace-string（字符串替换）这个命令，它会把一个字符串替换
 提示确认的时候，输入 yes<Return>。</p>
 
 <ul>
-<li>回显区（ECHO AREA）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>回显区（ECHO AREA）</li>
 </ul>
+
+<hr />
 
 <p>如果 Emacs 发现你输入多字符命令的节奏很慢，它会在窗格的下方称为“回显区”
 的地方给你提示。回显区位于屏幕的最下面一行。</p>
 
 <ul>
-<li>状态栏（MODE LINE）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>状态栏（MODE LINE）</li>
 </ul>
+
+<hr />
 
 <p>位于回显区正上方的一行被称为“状态栏”。状态栏上会显示一些信息，比如：</p>
 
@@ -868,9 +870,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 </blockquote>
 
 <ul>
-<li>搜索（SEARCHING）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</li>
+<li>搜索（SEARCHING）</li>
 </ul>
+
+<hr />
 
 <p>Emacs 可以向前或向后搜索字符串（“字符串”指的是一组连续的字符）。搜索命
 令是一个移动光标的命令：搜索成功后，光标会停留在搜索目标出现的地方。</p>
@@ -913,9 +916,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 相比除了搜索方向相反之外，其余的操作都一样。</p>
 
 <ul>
-<li>多窗格（MULTIPLE WINDOWS）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</li>
+<li>多窗格（MULTIPLE WINDOWS）</li>
 </ul>
+
+<hr />
 
 <p>Emacs 的迷人之处很多，能够在屏幕上同时显示多个窗格就是其中之一。</p>
 
@@ -981,9 +985,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 </blockquote>
 
 <ul>
-<li>多窗口（MULTIPLE FRAMES）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>多窗口（MULTIPLE FRAMES）</li>
 </ul>
+
+<hr />
 
 <p>Emacs 可以创建多个窗口。窗口由许多窗格以及菜单、滚动条、回显区等组成。
 在图形界面下，多个窗口可以同时显示出来。在文本终端中，只能同时显示一个
@@ -1010,9 +1015,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 “X”按钮）。如果你关闭的是 Emacs 进程的最后一个窗口， Emacs 将会退出。</p>
 
 <ul>
-<li>递归编辑（RECURSIVE EDITING LEVELS）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>递归编辑（RECURSIVE EDITING LEVELS）</li>
 </ul>
+
+<hr />
 
 <p>有时候你会进入所谓的“递归编辑”。递归编辑状态由位于状态栏的方括号所指
 示，其中包含了用小括号来指明的模式名称。比如说，你有时可能会看到
@@ -1033,9 +1039,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 命令和其参数（arguments）。</p>
 
 <ul>
-<li>获得更多帮助（GETTING MORE HELP）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>获得更多帮助（GETTING MORE HELP）</li>
 </ul>
+
+<hr />
 
 <p>本快速指南的目的仅仅是帮助你在 Emacs 的海洋里下水，不至于束手无策望洋兴
 叹。有关 Emacs 的话题可谓汗牛充栋，这里自然是难尽万一。不过 Emacs 很理
@@ -1149,9 +1156,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 <p>Emacs 使用手册里还有许许多多的精彩功能等着你来了解。</p>
 
 <ul>
-<li>总结（CONCLUSION）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</li>
+<li>总结（CONCLUSION）</li>
 </ul>
+
+<hr />
 
 <p>要退出 Emacs 请用 C-x C-c。</p>
 
@@ -1159,9 +1167,10 @@ mode）存在。辅模式并不能替代主模式，而是提供一些辅助的�
 要怀疑自己，那一定是我们没有写好。我们永远欢迎你的不满和抱怨。</p>
 
 <ul>
-<li>翻译（TRANSLATION）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>翻译（TRANSLATION）</li>
 </ul>
+
+<hr />
 
 <p>翻译：孙一江 <a href="mailto:sunyijiang@gmail.com">sunyijiang@gmail.com</a>
 维护：薛富侨 <a href="mailto:xfq.free@gmail.com">xfq.free@gmail.com</a>
@@ -1235,9 +1244,10 @@ incremental search    渐进式搜索 [3]
     择将“incremental search”译作“渐进式搜索”。</p>
 
 <ul>
-<li>版权声明（COPYING）
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</li>
+<li>版权声明（COPYING）</li>
 </ul>
+
+<hr />
 
 <p>This tutorial descends from a long line of Emacs tutorials
 starting with the one written by Stuart Cracraft for the original Emacs.</p>
