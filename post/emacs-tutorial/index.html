@@ -113,28 +113,13 @@ M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 AL
 
 <p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 C-p 、 C-b 、 C-f 和 C-n 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
 
-<pre><code class="language-flow">st=&gt;start: 开始
-e=&gt;end: 登录
-io1=&gt;inputoutput: 输入用户名密码
-sub1=&gt;subroutine: 数据库查询子类
-cond=&gt;condition: 是否有此用户
-cond2=&gt;condition: 密码是否正确
-op=&gt;operation: 读入用户信息
-
-st-&gt;io1-&gt;sub1-&gt;cond
-cond(yes,right)-&gt;cond2
-cond(no)-&gt;io1(right)
-cond2(yes,right)-&gt;op-&gt;e
-cond2(no)-&gt;io1
-</code></pre>
-
-<pre><code>           上一行 C-p
+<pre><code>                上一行 C-p
                     :
-            :
+                    :
 向左移 C-b .... 目前光标位置 .... 向右移 C-f
-            :
-            :
-        下一行 C-n
+                    :
+                    :
+                下一行 C-n
 </code></pre>
 
 <blockquote>
