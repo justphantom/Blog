@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JustPhantom</title>
+    <title>Justphantom</title>
     <link>https://justphantom.github.io/</link>
-    <description>Recent content on JustPhantom</description>
+    <description>Recent content on Justphantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 21 Sep 2019 09:04:33 +0800</lastBuildDate>
@@ -17,11 +17,7 @@
       <pubDate>Sat, 21 Sep 2019 09:04:33 +0800</pubDate>
       
       <guid>https://justphantom.github.io/post/emacs-tutorial/</guid>
-      <description>Emacs 快速指南.（查看版权声明请至本文末尾）
-【注意：位于【】之间的内容是译注，比如本行，下同。】
-Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：
- C-&amp;lt;chr&amp;gt; 表示当输入字符 &amp;lt;chr&amp;gt; 时按住 CONTROL 键。 因此 C-f 就表示：按住 CONTROL 键再输入 f。 M-&amp;lt;chr&amp;gt; 表示当输入字符 &amp;lt;chr&amp;gt; 时按住 META（或 EDIT 或 ALT）键。 如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效： 先按一下 ESC 键然后放开，再输入 &amp;lt;chr&amp;gt;。我们用 &amp;lt;ESC&amp;gt; 来表示 ESC 键。  重要提示：要退出 Emacs，请用 C-x C-c（两个连续的组合键）。 要退出一个正在运行中的命令，请用 C-g。 下文中左边顶行的“&amp;gt;&amp;gt;”字样用来提示你尝试键盘命令。比如：
-  现在输入 C-v （查看下一屏文字）移动到下一屏。 （别紧张，在输入字符 v 的同时注意要按住 CONTROL 键） 从现在开始，每读完当前一屏你都需要这样做一次。</description>
+      <description>Emacs 快速指南.（查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和</description>
     </item>
     
     <item>
@@ -30,12 +26,7 @@ Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示
       <pubDate>Tue, 17 Sep 2019 10:51:30 +0800</pubDate>
       
       <guid>https://justphantom.github.io/post/portable-vim/</guid>
-      <description>下载gVim 访问 Vim 官网下载页面；
-下载 GUI executable 压缩包，比如 gvim81.zip；
-解压缩gVim 解压缩到本地路径，如 D:\Vim；
-进入 D:\Vim 可以看到里面有 子目录 vim81，其中包含了gVim 的主程序 gvim.exe，此时先不运行它；
-在 D:\Vim 目录下新建一个文本文件，文件名为 .vimrc；这个是 gVim 的配置文件，根据自己的需求编辑该文件，也可先不编辑；
-运行 D:\Vim\vim81\gvim.exe 即可。</description>
+      <description>下载gVim 访问 Vim 官网下载页面； 下载 GUI executable 压缩包，比如 gvim81.zip； 解压缩gVim 解压缩到本地路径，如 D:\Vim； 进入 D:\Vim 可以看到里面</description>
     </item>
     
     <item>
@@ -44,18 +35,7 @@ Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示
       <pubDate>Mon, 16 Sep 2019 17:48:30 +0800</pubDate>
       
       <guid>https://justphantom.github.io/post/portable-emacs/</guid>
-      <description> 下载Emacs 访问 Emacs镜像FTP，选择对应的版本下载，如 emacs-26.3-x86_64。
-解压缩 Emacs 将压缩包解压到本地路径，如 D:\Emacs；
-运行 D:\Emacs\bin\runemacs.exe；
-保存配置，然后退出；
-新建 home 文件夹，如 D:\Emacs\share\emacs\26.3\home；
-进入 site-lisp 文件夹，如 D:\Emacs\share\emacs\26.3\site-lisp；
-创建 site-start.el 文件，内容如下：
-(defvar usb-drive-letter (substring data-directory 0 -4)) (defvar usb-home-dir (concat usb-drive-letter &amp;quot;home/&amp;quot;)) (setenv &amp;quot;HOME&amp;quot; usb-home-dir)	 再将emacs配置文件 .emacs 和 .emacs.d 文件夹从原来的位置移动到 D:\Emacs\share\emacs\26.3\home 之中；
-默认的 .emacs 和 .emacs.d 应该在 %APPDATA% 目录下。
-完成 绿化完成，以后只需直接运行 D:\Emacs\bin\runemacs.exe 即可，配置文件已包含在 D:\Emacs\share\emacs\26.3\home 中了。
- 引用：windows下完全绿化的Emacs编辑环境（How to get a portable Emacs？）
- </description>
+      <description>下载Emacs 访问 Emacs镜像FTP，选择对应的版本下载，如 emacs-26.3-x86_64。 解压缩 Emacs 将压缩包解压到本地路径，如 D:\E</description>
     </item>
     
     <item>
@@ -64,10 +44,7 @@ Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示
       <pubDate>Wed, 11 Sep 2019 23:46:25 +0800</pubDate>
       
       <guid>https://justphantom.github.io/post/zhong-qiu-jie/</guid>
-      <description>中天何处不月明
-秋风未解思乡情
-佳期将至心难静
-节来当归旧园庭</description>
+      <description>中天何处不月明 秋风未解思乡情 佳期将至心难静 节来当归旧园庭</description>
     </item>
     
   </channel>

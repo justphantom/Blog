@@ -1,62 +1,164 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title>Emacs Tutorial - JustPhantom</title>
-    
-    <meta name="description" content="Emacs 快速指南.（查看版权声明请至本文末尾）
-【注意：位于【】之间的内容是译注，比如本行，下同。】
-Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：
- C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。 因此 C-f 就表示：按住 CONTROL 键再输入 f。 M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。 如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效： 先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。  重要提示：要退出 Emacs，请用 C-x C-c（两个连续的组合键）。 要退出一个正在运行中的命令，请用 C-g。 下文中左边顶行的“&gt;&gt;”字样用来提示你尝试键盘命令。比如：
-  现在输入 C-v （查看下一屏文字）移动到下一屏。 （别紧张，在输入字符 v 的同时注意要按住 CONTROL 键） 从现在开始，每读完当前一屏你都需要这样做一次。">
-    <meta name="author" content="">
-    
-    <link href="https://justphantom.github.io/an-old-hope.min.css" rel="stylesheet">
-    <link href="https://justphantom.github.io/style.css" rel="stylesheet">
-    
-    <link rel="apple-touch-icon" href="https://justphantom.github.io/apple-touch-icon.png">
-    <link rel="icon" href="https://justphantom.github.io/favicon.ico">
-    
-    <meta name="generator" content="Hugo 0.58.3" />
-    
-    <link rel="alternate" type="application/atom+xml" href="https://justphantom.github.io/index.xml" title="JustPhantom">
-    
-    
-  </head>
-  <body class="single">
-    <header class="header">
-      <nav class="nav">
-        
-        <p class="logo"><a href="https://justphantom.github.io/">JustPhantom</a></p>
-        
-        
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Emacs Tutorial - Justphantom</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="JustPhantom" /><meta name="description" content="Emacs 快速指南.（查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://justphantom.github.io/post/emacs-tutorial/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Emacs Tutorial" />
+<meta property="og:description" content="Emacs 快速指南.（查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://justphantom.github.io/post/emacs-tutorial/" />
+<meta property="article:published_time" content="2019-09-21T09:04:33+08:00" />
+<meta property="article:modified_time" content="2019-09-21T09:04:33+08:00" />
+<meta itemprop="name" content="Emacs Tutorial">
+<meta itemprop="description" content="Emacs 快速指南.（查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和">
+
+
+<meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
+<meta itemprop="wordCount" content="17442">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Tutorial"/>
+<meta name="twitter:description" content="Emacs 快速指南.（查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
     </header>
-    <main class="main">
 
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Emacs Tutorial</h1>
 
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">Emacs Tutorial</h1>
-    <div class="post-meta">September 21, 2019</div>
-  </header>
-  <div class="post-content"><p>Emacs 快速指南.（查看版权声明请至本文末尾）</p>
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-21 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>Emacs 快速指南.（查看版权声明请至本文末尾）</p>
 
 <p>【注意：位于【】之间的内容是译注，比如本行，下同。】</p>
 
 <p>Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：</p>
-
-<pre><code>    C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
             因此 C-f 就表示：按住 CONTROL 键再输入 f。
 
     M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
             如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：
-            先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。
-</code></pre>
-
+            先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。</pre></td></tr></table>
+</div>
+</div>
 <p>重要提示：要退出 Emacs，请用 C-x C-c（两个连续的组合键）。
 要退出一个正在运行中的命令，请用 C-g。
 下文中左边顶行的“&gt;&gt;”字样用来提示你尝试键盘命令。比如：</p>
@@ -86,13 +188,20 @@ Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示
 <hr />
 
 <p>以下命令在翻页浏览时相当有用：</p>
-
-<pre><code>    C-v 向前移动一屏
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    C-v 向前移动一屏
     M-v 向后移动一屏
     C-l 重绘屏幕，并将光标所在行置于屏幕的中央
-        （注意是 CONTROL-L，不是 CONTROL-1）
-</code></pre>
-
+        （注意是 CONTROL-L，不是 CONTROL-1）</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>找到光标，留意其附近的文字，然后输入 C-l。
@@ -112,16 +221,26 @@ Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示
 <p>整屏的移动很有用，但是如何在文字中精确定位呢？</p>
 
 <p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 C-p 、 C-b 、 C-f 和 C-n 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
-
-<pre><code>                上一行 C-p
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">                上一行 C-p
                     :
                     :
 向左移 C-b .... 目前光标位置 .... 向右移 C-f
                     :
                     :
-                下一行 C-n
-</code></pre>
-
+                下一行 C-n</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>用 C-n 或 C-p 将光标移到上图的中央。
@@ -201,8 +320,25 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>光标停留的位置也可以称作“点位”（point）。或者干脆说，光标指示出了屏幕上“点位”在文本中的位置。</p>
 
 <p>这里对简单的光标移动命令做一个总结，其中也包括了整词和整句的移动：</p>
-
-<pre><code>    C-f 向右移动一个字符
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    C-f 向右移动一个字符
     C-b 向左移动一个字符
 
     M-f 向右移动一个词【对中文是移动到下一个标点符号】
@@ -215,9 +351,9 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
     C-e 移动到行尾
 
     M-a 移动到句首
-    M-e 移动到句尾
-</code></pre>
-
+    M-e 移动到句尾</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>把上面所有的命令都练习几次，这些可都是最常用的命令。</p>
@@ -321,10 +457,14 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <hr />
 
 <p>Emacs 可以有多个“窗格”，每个窗格显示不同的文字。后面会介绍怎么对付多个窗格，现在我们先学会如何关掉多余的窗格。其实也很简单：</p>
-
-<pre><code>    C-x 1   只保留一个窗格（也就是关掉其它所有窗格）。
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    C-x 1   只保留一个窗格（也就是关掉其它所有窗格）。</pre></td></tr></table>
+</div>
+</div>
 <p>也就是先按 CONTROL-x 然后再按 1。C-x 1 会保留光标所在的窗格，并将其扩大到整个屏幕，同时关掉所有其它的窗格。</p>
 
 <blockquote>
@@ -405,17 +545,28 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <p>好，现在你应该已经掌握了最基本的的文本插入和修改功能，其实删除还可以
 “以词为单位”进行，下面是一个关于“删除”操作的小结：</p>
-
-<pre><code>    &lt;DEL&gt;       删除光标前的一个字符
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    &lt;DEL&gt;       删除光标前的一个字符
     C-d         删除光标后的一个字符
 
     M-&lt;DEL&gt;     移除光标前的一个词
     M-d         移除光标后的一个词
 
     C-k         移除从光标到“行尾”间的字符
-    M-k         移除从光标到“句尾”间的字符
-</code></pre>
-
+    M-k         移除从光标到“句尾”间的字符</pre></td></tr></table>
+</div>
+</div>
 <p>【可能你已经注意到了“删除（delete）”和“移除（kill）”的用词区别，后文会有详细说明。】</p>
 
 <p>注意“&lt;DEL&gt; 和 C-d”还有“M-&lt;DEL&gt; 和 M-d”是根据前述惯例从 C-f 和 M-f 衍生出来的（其实&lt;DEL&gt;不是控制字符，我们先忽略这一点）。C-k和 M-k 的关系在某种程度上与 C-e 和 M-e 一样――如果把“一行”和“一句”作一个类比的话。</p>
@@ -524,17 +675,25 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>寻找到一个文件意味着你可以在 Emacs 里查看这个文件的内容。从许多角度看，这就等于你在直接编辑这个文件，只是你所做的修改只有在“存盘”的时候才会被写入文件。也正因为如此，你可以丢弃一个写到一半的文件而不必把这个残缺文件也保存到计算机上。在存盘的时候，Emacs 会把存盘前的文件重命名保存，以防你改完之后又想反悔。</p>
 
 <p>在屏幕的下方，你应该能够看到头部有短线“-”的一行，行首通常是一些诸如：</p>
-
-<pre><code>-:--- TUTORIAL.cn
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-:--- TUTORIAL.cn</pre></td></tr></table>
+</div>
+</div>
 <p>的文字，这些文字代表了你当前正在访问的文件。比如你现在正在访问的文件是对 Emacs 快速指南的一份临时拷贝，叫做“TUTORIAL.cn”。每当Emacs 寻找到一个文件，文件名就会出现在这个位置。</p>
 
 <p>寻找文件的命令有一个特点，那就是你必须给出文件名。我们称这个命令“读入了一个参数”（在这里，这个参数显然就是文件名）。在你输入这条命令之后：</p>
-
-<pre><code>C-x C-f 寻找一个文件
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x C-f 寻找一个文件</pre></td></tr></table>
+</div>
+</div>
 <p>Emacs 会提示你输入文件名。你输入的文件名会出现在屏幕最底端的一行，这一行被称为小缓冲（minibuffer），在小缓冲里你可以使用通常的 Emacs 编辑命令来编辑文件名。</p>
 
 <p>在小缓冲里输入文件名（其实输入其它东西也一样）时可以用 C-g 取消。</p>
@@ -550,10 +709,14 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>用 &lt;Return&gt; 结束文件名的输入。之后，小缓冲会消失，C-x C-f 将会去寻找你指定的文件。小缓冲在 C-x C-f 命令结束之后也会消失。</p>
 
 <p>文件被显示在了屏幕上，你可以开始编辑了。存盘用这条命令：</p>
-
-<pre><code>C-x C-s 储存这个文件
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x C-s 储存这个文件</pre></td></tr></table>
+</div>
+</div>
 <p>这条命令把 Emacs 中的文字存储到文件中。第一次存盘的时候 Emacs 会将原文件重命名以备份。重命名的规则通常是在原文件名之后添加一个“~”字符。【对许多人来说，这是一个烦人的特性，关掉文件备份可以用如下命令：
   M-x customize-variable &lt;Return&gt; make-backup-files &lt;Return&gt;】</p>
 
@@ -578,10 +741,14 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>你可以用 C-x C-f 找到并打开第二个文件，但第一个文件仍然在 Emacs 中。要切回第一个文件，一种办法是再用一次 C-x C-f。这样，你就可以在 Emacs 中同时打开多个文件。</p>
 
 <p>Emacs 把每个编辑中的文件都放在一个称为“缓冲区（buffer）”的地方。每寻找到一个文件，Emacs 就在其内部开辟一个缓冲区。用下面的命令可以列出当前所有的缓冲区：</p>
-
-<pre><code>C-x C-b 列出缓冲区
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x C-b 列出缓冲区</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>现在就试一下 C-x C-b</p>
@@ -619,10 +786,14 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </blockquote>
 
 <p>如果你对某个文件做了些修改，然后切换到另一个文件，这个动作并不会帮你把前一个文件存盘。对第一个文件的修改仍然仅存在于 Emacs 中，也就是在它对应的缓冲区里。并且，对第二个文件的修改也不会影响到第一个文件。这很有用，但也意味着你需要一个简便的办法来保存第一个文件的缓冲区。先切换回那个缓冲区，再用 C-x C-s 存盘，太麻烦了。你需要一个更简便的方法，而 Emacs 已经为你准备好了：</p>
-
-<pre><code>C-x s   保存多个缓冲区
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x s   保存多个缓冲区</pre></td></tr></table>
+</div>
+</div>
 <p>C-x s 会找出所有已被修改但尚未存盘的缓冲区，然后向你逐个询问：是否需要存盘？</p>
 
 <blockquote>
@@ -640,11 +811,16 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <hr />
 
 <p>Emacs 的命令就像天上的星星，数也数不清。把它们都对应到 CONTROL 和 META 组合键上显然是不可能的。Emacs 用扩展（eXtend）命令来解决这个问题，扩展命令有两种风格：</p>
-
-<pre><code>C-x  字符扩展。 C-x 之后输入另一个字符或者组合键。
-M-x  命令名扩展。 M-x 之后输入一个命令名。
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x  字符扩展。 C-x 之后输入另一个字符或者组合键。
+M-x  命令名扩展。 M-x 之后输入一个命令名。</pre></td></tr></table>
+</div>
+</div>
 <p>很多扩展命令都相当有用，虽然与你已经学过的命令比起来，他们可能不那么常用。我们早已经见过一些扩展命令了，比如用 C-x C-f 寻找文件和用 C-x C-s 保存文件；退出 Emacs 用的 C-x C-c 也是扩展命令。（不用担心退出 Emacs 会给你带来什么损失，Emacs 会在退出之前提醒你存盘的。）</p>
 
 <p>如果你使用图形界面，你不需要任何特殊的命令来切换 Emacs 和其他应用程序。你可以使用鼠标或者窗口管理器的命令。然而，如果你使用只能同时显示一个应用程序的文本终端，你需要“挂起” Emacs ，以切换到其他的应用程序。</p>
@@ -655,15 +831,24 @@ M-x  命令名扩展。 M-x 之后输入一个命令名。
 器的时候（比如被一个邮件处理程序调用），也可以用 C-x C-c 退出。</p>
 
 <p>C-x 的扩展命令有很多，下面列出的是你已经学过的：</p>
-
-<pre><code>C-x C-f 寻找文件。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-x C-f 寻找文件。
 C-x C-s 保存文件。
 C-x C-b 列出缓冲区。
 C-x C-c 离开 Emacs。
 C-x 1   关掉其它所有窗格，只保留一个。
-C-x u   撤销。
-</code></pre>
-
+C-x u   撤销。</pre></td></tr></table>
+</div>
+</div>
 <p>用命令名扩展的命令通常并不常用，或只用在部分模式下。比如 replace-string（字符串替换）这个命令，它会把一个字符串替换成另一个。在输入 M-x 之后，Emacs 会在屏幕底端向你询问并等待你输入命令名。如果你想输入“replace-string”，其实只需要敲“repl s&lt;TAB&gt;”就行了，Emacs 会帮你自动补齐。输入完之后按 &lt;Return&gt; 提交。</p>
 
 <p>字符串替换命令需要两个参数――被替换的字符串和用来替换它的字符串。每个参数的输入都以换行符来结束。</p>
@@ -673,10 +858,14 @@ C-x u   撤销。
 <p>将光标移到本行下面第二行的空白处，然后输入</p>
 </blockquote>
 </blockquote>
-
-<pre><code>M-x repl s &lt;Return&gt; changed &lt;Return&gt; altered &lt;Return&gt;。
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">M-x repl s &lt;Return&gt; changed &lt;Return&gt; altered &lt;Return&gt;。</pre></td></tr></table>
+</div>
+</div>
 <p>【以下保留一行原文，以应练习之需：】
 Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
@@ -708,10 +897,14 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 <hr />
 
 <p>位于回显区正上方的一行被称为“状态栏”。状态栏上会显示一些信息，比如：</p>
-
-<pre><code>-:**- TUTORIAL.cn 63% L749 (Fundamental)
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-:**- TUTORIAL.cn 63% L749 (Fundamental)</pre></td></tr></table>
+</div>
+</div>
 <p>状态栏显示了 Emacs 的状态和你正在编辑的文字的一些信息。</p>
 
 <p>你应该知道文件名的意思吧？就是你找到的那个文件嘛。-NN%&ndash; 显示的是光标在全文中的位置。如果位于文件的开头，那么就显示 &ndash;Top&ndash; 而不是 &ndash;00%&ndash;；如果位于文件的末尾，就显示 &ndash;Bot&ndash;。如果文件很小，一屏就足以显示全部内容，那么状态栏会显示 &ndash;All&ndash;。</p>
@@ -938,10 +1131,14 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 </blockquote>
 
 <p>显示的消息应该会是这样：</p>
-
-<pre><code>C-p runs the command previous-line
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-p runs the command previous-line</pre></td></tr></table>
+</div>
+</div>
 <p>这条消息显示了 C-p 命令对应的函数名。命令的功能由函数完成，所以函数名本身也可以被看成是最简单的文档――至少对于你已经学过的命令来说，它们的函数名足以解释它们的功能了。</p>
 
 <p>多字符命令一样可以用 C-h c 来查看。</p>
@@ -957,10 +1154,14 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 <p>上面的命令会新打开一个 Emacs 窗格以显示函数的名称及其文档。你读完之后可以用 C-x 1 关掉这个帮助窗格。当然你并不需要立即这样做，你完全可以先在编辑窗格里做点别的事情，然后再关掉帮助窗格。</p>
 
 <p>还有一些其它有用的 C-h 命令：</p>
-
-<pre><code>C-h f   解释一个函数。需要输入函数名。
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-h f   解释一个函数。需要输入函数名。</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>试试看，输入 C-h f previous-line &lt;Return&gt;。
@@ -970,13 +1171,20 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 
 <p>C-h v 用来显示 Emacs 变量的文档。Emacs 变量可以被用来“定制 Emacs 的行
 为”。同样，你需要输入变量的名称。</p>
-
-<pre><code>C-h a  相关命令搜索（Command Apropos）。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-h a  相关命令搜索（Command Apropos）。
        输入一个关键词然后 Emacs 会列出所有命令名中包含此关键词的命令。
        这些命令全都可以用 M-x 来启动。
-       对于某些命令来说，相关命令搜索还会列出一两个组合键。
-</code></pre>
-
+       对于某些命令来说，相关命令搜索还会列出一两个组合键。</pre></td></tr></table>
+</div>
+</div>
 <blockquote>
 <blockquote>
 <p>输入 C-h a file &lt;Return&gt;。</p>
@@ -992,16 +1200,26 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 <p>输入 C-x 1 来删除 help 窗格。</p>
 </blockquote>
 </blockquote>
-
-<pre><code>C-h i  阅读手册（也就是通常讲的 Info）。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C-h i  阅读手册（也就是通常讲的 Info）。
        这个命令会打开一个称为“*info*”的特殊缓冲区，在那里，
        你可以阅读安装在系统里的软件包使用手册。
        要读 Emacs 的使用手册，按 m emacs \&lt;Return&gt; 就可以了。
        如果你之前从没用过 Info 系统，那么请按“?”，
        Emacs 会带你进入 Info 的使用指南。
-       在看完本快速指南之后，Emacs Info 会成为你的主要参考文档。
-</code></pre>
-
+       在看完本快速指南之后，Emacs Info 会成为你的主要参考文档。</pre></td></tr></table>
+</div>
+</div>
 <ul>
 <li>更多精彩（MORE FEATURES）</li>
 </ul>
@@ -1040,8 +1258,28 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 你可以通过电子邮件直接联系维护者，也可以放到 GNU Emacs 的开发邮件列表或者水木社区的 Emacs 板上进行讨论。</p>
 
 <p>下面列出主要术语的译词对照，并给出注释说明：</p>
-
-<pre><code>command             命令
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">command             命令
 cursor              光标
 scrolling           滚动
 numeric argument    数字参数
@@ -1057,9 +1295,9 @@ minibuffer          小缓冲
 echo area           回显区
 mode line           状态栏
 search              搜索
-incremental search  渐进式搜索 [3]
-</code></pre>
-
+incremental search  渐进式搜索 [3]</pre></td></tr></table>
+</div>
+</div>
 <p>对于其他没有提到的术语，读者可以参考 Emacs 使用手册里的术语表。</p>
 
 <p>[1] “window”一词在计算机相关的领域一般都被译为“窗口”。但是在 Emacs中，还有一个“frame”的概念。在被广泛使用的 X 窗口系统和微软的视窗（Windows）系列操作系统中，Emacs 的一个“frame”就是一个“窗口”，因此把 Emacs 中的“frame”译成“窗口”更加符合通常的习惯。这样，Emacs中的“window”就只能译成“窗格”了。我们认为 Emacs 中 window 和
@@ -1111,24 +1349,106 @@ starting with the one written by Stuart Cracraft for the original Emacs.</p>
 <p>您应已收到附随于 GNU Emacs 的GNU通用公共授权的副本；如果没有，请参照 <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.</p>
 
 <p>敬请阅读文件“COPYING”，然后向你的朋友们分发 GNU Emacs 拷贝。让我们以使用、编写和分享自由软件的实际行动来共同祛除软件障碍主义（所谓的“所有权”）！</p>
-</div>
-  
-  
-  
-  
-  
-</article>
 
-</main>
-<footer class="footer">
-  <span>&copy; 2019 <a href="https://justphantom.github.io/">JustPhantom</a></span>
-  <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
-  <span>&middot;</span>
-  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
-</footer>
-<script src="https://justphantom.github.io/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">JustPhantom</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-09-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/portable-vim/">
+            <span class="next-text nav-default">便携版 gVim</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://justphantom.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">JustPhantom</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
 </body>
 </html>
-
