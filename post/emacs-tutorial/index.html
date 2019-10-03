@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17445">
+<meta itemprop="wordCount" content="17463">
 
 
 
@@ -137,10 +137,27 @@
 <li><a href="#emacs-快速指南">Emacs 快速指南</a>
 <ul>
 <li><a href="#小结-summary">小结（SUMMARY）</a></li>
+<li><a href="#基本的光标控制-basic-cursor-control">基本的光标控制（BASIC CURSOR CONTROL）</a></li>
+<li><a href="#如果-emacs-失去响应-if-emacs-stops-responding">如果 EMACS 失去响应（IF EMACS STOPS RESPONDING）</a></li>
 <li><a href="#被禁用的命令-disabled-commands">被禁用的命令（DISABLED COMMANDS）</a></li>
 <li><a href="#窗格-windows">窗格（WINDOWS）</a></li>
 <li><a href="#插入与删除-inserting-and-deleting">插入与删除（INSERTING AND DELETING）</a></li>
 <li><a href="#撤销-undo">撤销（UNDO）</a></li>
+<li><a href="#文件-file">文件（FILE）</a></li>
+<li><a href="#缓冲区-buffer">缓冲区（BUFFER）</a></li>
+<li><a href="#命令集扩展-extending-the-command-set">命令集扩展（EXTENDING THE COMMAND SET）</a></li>
+<li><a href="#自动保存-auto-save">自动保存（AUTO SAVE）</a></li>
+<li><a href="#回显区-echo-area">回显区（ECHO AREA）</a></li>
+<li><a href="#状态栏-mode-line">状态栏（MODE LINE）</a></li>
+<li><a href="#搜索-searching">搜索（SEARCHING）</a></li>
+<li><a href="#多窗格-multiple-windows">多窗格（MULTIPLE WINDOWS）</a></li>
+<li><a href="#多窗口-multiple-frames">多窗口（MULTIPLE FRAMES）</a></li>
+<li><a href="#递归编辑-recursive-editing-levels">递归编辑（RECURSIVE EDITING LEVELS）</a></li>
+<li><a href="#获得更多帮助-getting-more-help">获得更多帮助（GETTING MORE HELP）</a></li>
+<li><a href="#更多精彩-more-features">更多精彩（MORE FEATURES）</a></li>
+<li><a href="#总结-conclusion">总结（CONCLUSION）</a></li>
+<li><a href="#翻译-translation">翻译（TRANSLATION）</a></li>
+<li><a href="#版权声明-copying">版权声明（COPYING）</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -168,12 +185,12 @@
 </span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">    C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
-            因此 C-f 就表示：按住 CONTROL 键再输入 f。
+<pre class="chroma">C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
+        因此 C-f 就表示：按住 CONTROL 键再输入 f。
 
-    M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
-            如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：
-            先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。</pre></td></tr></table>
+M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
+        如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：
+        先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。</pre></td></tr></table>
 </div>
 </div>
 <p>重要提示：要退出 Emacs，请用 C-x C-c（两个连续的组合键）。
@@ -213,27 +230,24 @@
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">    C-v 向前移动一屏
-    M-v 向后移动一屏
-    C-l 重绘屏幕，并将光标所在行置于屏幕的中央
-        （注意是 CONTROL-L，不是 CONTROL-1）</pre></td></tr></table>
+<pre class="chroma">C-v 向前移动一屏
+M-v 向后移动一屏
+C-l 重绘屏幕，并将光标所在行置于屏幕的中央
+   （注意是 CONTROL-L，不是 CONTROL-1）
+
+找到光标，留意其附近的文字，然后输入 C-l。</pre></td></tr></table>
 </div>
 </div>
-<blockquote>
-<blockquote>
-<p>找到光标，留意其附近的文字，然后输入 C-l。
-找找光标在哪里，你会发现其附近的文字与之前相同，位置却变为屏幕的中心。
+<p>找找光标在哪里，你会发现其附近的文字与之前相同，位置却变为屏幕的中心。
 如果你再次输入 C-l ，附近的文字将移动到屏幕的顶端。再次输入 C-l ，文字将移动到底端。</p>
-</blockquote>
-</blockquote>
 
 <p>如果你的键盘上有 PageUp 和 PageDn，也可以用这两个键来滚屏。不过使用 C-v 和 M-v 的效率要更高一些。</p>
 
-<ul>
-<li>基本的光标控制（BASIC CURSOR CONTROL）</li>
-</ul>
+<h2 id="基本的光标控制-basic-cursor-control">基本的光标控制（BASIC CURSOR CONTROL）</h2>
 
 <hr />
 
@@ -242,13 +256,16 @@
 <p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 C-p 、 C-b 、 C-f 和 C-n 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma">                上一行 C-p
@@ -257,71 +274,80 @@
 向左移 C-b .... 目前光标位置 .... 向右移 C-f
                     :
                     :
-                下一行 C-n</pre></td></tr></table>
-</div>
-</div>
-<blockquote>
-<blockquote>
-<p>用 C-n 或 C-p 将光标移到上图的中央。
-按 C-l，整幅图会被显示在屏幕的中央。</p>
-</blockquote>
-</blockquote>
+                下一行 C-n
 
+用 C-n 或 C-p 将光标移到上图的中央。
+按 C-l，整幅图会被显示在屏幕的中央。</pre></td></tr></table>
+</div>
+</div>
 <p>“P N B F”四个字母分别代表了四个词，用这四个词记忆这些组合键会更容易：
 P 代表 previous（上一行），N 代表 next（下一行），B 代表backward（回退），而 F 则代表 forward（前进）。这些组合键今后将与你形影不离。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">按几次 C-n 把光标往下挪到这里。
 
-<blockquote>
-<blockquote>
-<p>按几次 C-n 把光标往下挪到这里。</p>
-
-<p>用 C-f 把光标移动到这一行，然后再用 C-p 往上挪。
-注意观察当光标在一行的中央时 C-p 命令的行为。</p>
-</blockquote>
-</blockquote>
-
+用 C-f 把光标移动到这一行，然后再用 C-p 往上挪。
+注意观察当光标在一行的中央时 C-p 命令的行为。</pre></td></tr></table>
+</div>
+</div>
 <p>每行文字都以一个“换行符”结束，“换行符”把行与行区分开来。（通常情况下，一个文件的最后一行会有一个换行符，但是 Emacs 不强制要求这一点。）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">在一行的行头输入 C-b。</pre></td></tr></table>
+</div>
+</div>
+<p>光标应该会移动到前一行的行尾，因为光标在回退过程中越过了换行符。</p>
 
-<blockquote>
-<blockquote>
-<p>在一行的行头输入 C-b。
-光标应该会移动到前一行的行尾，因为光标在回退过程中越过了换行符。</p>
-</blockquote>
-</blockquote>
-
-<p>同样 C-f 也可以像 C-b 一样越过换行符。</p>
-
-<blockquote>
-<blockquote>
-<p>连按几次 C-b，感受一下光标的移动。
+<p>同样 <code>C-f</code> 也可以像 <code>C-b</code> 一样越过换行符。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">连按几次 C-b，感受一下光标的移动。
 然后按几次 C-f 回到本行的行尾。
-再按一次 C-f，光标会移动到下一行。</p>
-</blockquote>
-</blockquote>
-
+再按一次 C-f，光标会移动到下一行。</pre></td></tr></table>
+</div>
+</div>
 <p>当你移动光标穿越屏幕的上下边界时，在边界外的文字会移动到屏幕内，这称为“滚动”（scrolling）。滚动使得光标可以被移动到文字中的任何位置，并且还不会让光标跑到屏幕外边去。</p>
-
-<blockquote>
-<blockquote>
-<p>用 C-n 将光标下移，一直越过屏幕边界，同时观察发生了什么变化。</p>
-</blockquote>
-</blockquote>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">用 C-n 将光标下移，一直越过屏幕边界，同时观察发生了什么变化。</pre></td></tr></table>
+</div>
+</div>
 <p>如果你嫌一个字符一个字符地挪光标太慢，你还可以一个词一个词地跳。M-f (META-f) 可以将光标往前移动一个词，而 M-b 则是往后移。【这里的“词”指英文单词，对中文来说，则是指移动到下一个标点符号。】</p>
-
-<blockquote>
-<blockquote>
-<p>试试 M-f 和 M-b。</p>
-</blockquote>
-</blockquote>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">试试 M-f 和 M-b。</pre></td></tr></table>
+</div>
+</div>
 <p>如果光标停在一个词的中间，M-f 会移动到这个词的末尾。如果光标处于词与词之间的空白处，M-f 会移动到下一个词的末尾。M-b 的功能类似，只是方向相反。</p>
-
-<blockquote>
-<blockquote>
-<p>按几次 M-f 和 M-b，中间夹杂一些 C-f 和 C-b。
-你可以观察到 M-f 和 M-b 在不同位置上所表现出来的不同行为。</p>
-</blockquote>
-</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">按几次 M-f 和 M-b，中间夹杂一些 C-f 和 C-b。</pre></td></tr></table>
+</div>
+</div>
+<p>你可以观察到 M-f 和 M-b 在不同位置上所表现出来的不同行为。</p>
 
 <p>请注意 C-f 、C-b 和 M-f 、M-b 两对之间的类比关系。通常的惯例是：META 系列组合键用来操作“由语言定义的单位（比如词、句子、段落）”，而 CONTROL 系列组合键用来操作“与语言无关的基本单位（比如字符、行等等）”。</p>
 
@@ -393,15 +419,10 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </blockquote>
 </blockquote>
 
-<p>如果你的键盘上有方向键的话，也可以用它们来移动光标。不过我们有三个理由推荐你学习 C-b 、C-f 、C-n 、和 C-p：</p>
-
-<ol>
-<li><p>它们在任何键盘上都能用。</p></li>
-
-<li><p>当你熟练使用 Emacs 之后，你会发现用这些组合键比用方向键要快得多，因为你的手不需要离开打字区。</p></li>
-
-<li><p>一旦你习惯了使用这些组合键，你也可以很容易地适应其它更高级的光标移动命令。</p></li>
-</ol>
+<p>如果你的键盘上有方向键的话，也可以用它们来移动光标。不过我们有三个理由推荐你学习 C-b 、C-f 、C-n 、和 C-p：
+1. 它们在任何键盘上都能用。
+2. 当你熟练使用 Emacs 之后，你会发现用这些组合键比用方向键要快得多，因为你的手不需要离开打字区。
+3. 一旦你习惯了使用这些组合键，你也可以很容易地适应其它更高级的光标移动命令。</p>
 
 <p>大部分的 Emacs 命令接受数字参数，并且对于多数命令而言，这些数字参数的作用是指定命令的重复次数。为一个命令指定数字参数（也就是重复次数）的方法是：先输入 C-u，然后输入数字作为参数，最后再输入命令。如果你有META （或 EDIT 或 ALT）键，那么还有另一种办法：按住 META 键不放，然后输入数字。不过我们还是建议你用 C-u，因为它在任何终端机上都能用。这种数字参数也称为“前缀参数”，意思是说这个参数是先于使用它的命令而输入的。</p>
 
@@ -429,9 +450,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <p>如果你的鼠标有滚轮的话，你也可以使用滚轮来滚动。</p>
 
-<ul>
-<li>如果 EMACS 失去响应（IF EMACS STOPS RESPONDING）</li>
-</ul>
+<h2 id="如果-emacs-失去响应-if-emacs-stops-responding">如果 EMACS 失去响应（IF EMACS STOPS RESPONDING）</h2>
 
 <hr />
 
@@ -675,9 +694,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <p>数字参数对于 C-/ 、 C-_ 和 C-x u 的意义是执行撤销的重复次数。</p>
 
-<ul>
-<li>文件（FILE）</li>
-</ul>
+<h2 id="文件-file">文件（FILE）</h2>
 
 <hr />
 
@@ -743,9 +760,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>你不但可以寻找一个已有的文件来查看或编辑，还可以寻找一个不存在的文件。实际上这正是
  Emacs 创建新文件的方法：找到不存在的新文件。事实上，只有在存盘的时候，Emacs 才会真正创建这个文件。而在这之后的一切就跟编辑一个已有文件没有区别了。</p>
 
-<ul>
-<li>缓冲区（BUFFER）</li>
-</ul>
+<h2 id="缓冲区-buffer">缓冲区（BUFFER）</h2>
 
 <hr />
 
@@ -815,9 +830,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </blockquote>
 </blockquote>
 
-<ul>
-<li>命令集扩展（EXTENDING THE COMMAND SET）</li>
-</ul>
+<h2 id="命令集扩展-extending-the-command-set">命令集扩展（EXTENDING THE COMMAND SET）</h2>
 
 <hr />
 
@@ -883,9 +896,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 <p>请注意这一行的变化：在光标之后的范围内，你已经将“changed”这个词――不
 论它在哪里出现――全部用“altered”替换掉了。</p>
 
-<ul>
-<li>自动保存（AUTO SAVE）</li>
-</ul>
+<h2 id="自动保存-auto-save">自动保存（AUTO SAVE）</h2>
 
 <hr />
 
@@ -893,17 +904,13 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>所以，假如不幸真的发生了，你大可以从容地打开原来的文件（注意不是自动保存文件）然后输入 M-x recover file &lt;Return&gt; 来恢复你的自动保存文件。在提示确认的时候，输入 yes&lt;Return&gt;。</p>
 
-<ul>
-<li>回显区（ECHO AREA）</li>
-</ul>
+<h2 id="回显区-echo-area">回显区（ECHO AREA）</h2>
 
 <hr />
 
 <p>如果 Emacs 发现你输入多字符命令的节奏很慢，它会在窗格的下方称为“回显区”的地方给你提示。回显区位于屏幕的最下面一行。</p>
 
-<ul>
-<li>状态栏（MODE LINE）</li>
-</ul>
+<h2 id="状态栏-mode-line">状态栏（MODE LINE）</h2>
 
 <hr />
 
@@ -984,9 +991,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 </blockquote>
 </blockquote>
 
-<ul>
-<li>搜索（SEARCHING）</li>
-</ul>
+<h2 id="搜索-searching">搜索（SEARCHING）</h2>
 
 <hr />
 
@@ -1018,9 +1023,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>前面说的都是“向下”搜索，如果想“向上”搜索，可以用 C-r。C-r 与 C-s 相比除了搜索方向相反之外，其余的操作都一样。</p>
 
-<ul>
-<li>多窗格（MULTIPLE WINDOWS）</li>
-</ul>
+<h2 id="多窗格-multiple-windows">多窗格（MULTIPLE WINDOWS）</h2>
 
 <hr />
 
@@ -1077,9 +1080,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 </blockquote>
 </blockquote>
 
-<ul>
-<li>多窗口（MULTIPLE FRAMES）</li>
-</ul>
+<h2 id="多窗口-multiple-frames">多窗口（MULTIPLE FRAMES）</h2>
 
 <hr />
 
@@ -1103,9 +1104,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>你也可以通过图形系统来关闭某个窗口（通常是在窗口上面的某个角落里的一个“X”按钮）。如果你关闭的是 Emacs 进程的最后一个窗口， Emacs 将会退出。</p>
 
-<ul>
-<li>递归编辑（RECURSIVE EDITING LEVELS）</li>
-</ul>
+<h2 id="递归编辑-recursive-editing-levels">递归编辑（RECURSIVE EDITING LEVELS）</h2>
 
 <hr />
 
@@ -1121,9 +1120,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>你不能用 C-g 退出递归编辑，因为 C-g 的作用是取消“本层递归编辑之内”的命令和其参数（arguments）。</p>
 
-<ul>
-<li>获得更多帮助（GETTING MORE HELP）</li>
-</ul>
+<h2 id="获得更多帮助-getting-more-help">获得更多帮助（GETTING MORE HELP）</h2>
 
 <hr />
 
@@ -1231,9 +1228,7 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
        在看完本快速指南之后，Emacs Info 会成为你的主要参考文档。</pre></td></tr></table>
 </div>
 </div>
-<ul>
-<li>更多精彩（MORE FEATURES）</li>
-</ul>
+<h2 id="更多精彩-more-features">更多精彩（MORE FEATURES）</h2>
 
 <hr />
 
@@ -1245,9 +1240,7 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 
 <p>Emacs 使用手册里还有许许多多的精彩功能等着你来了解。</p>
 
-<ul>
-<li>总结（CONCLUSION）</li>
-</ul>
+<h2 id="总结-conclusion">总结（CONCLUSION）</h2>
 
 <hr />
 
@@ -1255,9 +1248,7 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 
 <p>本文完全是为零起点新手所写的起步教程。如果你觉得哪里还看不明白，千万不要怀疑自己，那一定是我们没有写好。我们永远欢迎你的不满和抱怨。</p>
 
-<ul>
-<li>翻译（TRANSLATION）</li>
-</ul>
+<h2 id="翻译-translation">翻译（TRANSLATION）</h2>
 
 <hr />
 
@@ -1268,61 +1259,44 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 <p>翻译过程中最大的挑战莫过于术语译词的选择了。经过水木社区 Emacs 板热心网友小范围内的讨论，我们选择了现在的译法。用户的广泛参与是自由软件生命力的源泉，所以如果你有任何建议、勘误或想法，请用你喜欢的方式向我们提出。
 你可以通过电子邮件直接联系维护者，也可以放到 GNU Emacs 的开发邮件列表或者水木社区的 Emacs 板上进行讨论。</p>
 
-<p>下面列出主要术语的译词对照，并给出注释说明：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">command             命令
-cursor              光标
-scrolling           滚动
-numeric argument    数字参数
-window              窗格 [1]
-insert              插入
-delete              删除 [2]
-kill                移除 [2]
-yank                召回 [2]
-undo                撤销
-file                文件
-buffer              缓冲区
-minibuffer          小缓冲
-echo area           回显区
-mode line           状态栏
-search              搜索
-incremental search  渐进式搜索 [3]</pre></td></tr></table>
-</div>
-</div>
+<p>下面列出主要术语的译词对照，并给出注释说明：
+| 单词 | 释义 |
+| :&mdash; | :&mdash; |
+| command | 命令 |
+    cursor              光标
+    scrolling           滚动
+    numeric argument    数字参数
+    window              窗格 [1]
+    insert              插入
+    delete              删除 [2]
+    kill                移除 [2]
+    yank                召回 [2]
+    undo                撤销
+    file                文件
+    buffer              缓冲区
+    minibuffer          小缓冲
+    echo area           回显区
+    mode line           状态栏
+    search              搜索
+    incremental search  渐进式搜索 [3]</p>
+
 <p>对于其他没有提到的术语，读者可以参考 Emacs 使用手册里的术语表。</p>
 
 <p>[1] “window”一词在计算机相关的领域一般都被译为“窗口”。但是在 Emacs中，还有一个“frame”的概念。在被广泛使用的 X 窗口系统和微软的视窗（Windows）系列操作系统中，Emacs 的一个“frame”就是一个“窗口”，因此把 Emacs 中的“frame”译成“窗口”更加符合通常的习惯。这样，Emacs中的“window”就只能译成“窗格”了。我们认为 Emacs 中 window 和
  frame 的关系用窗格和窗口来类比是十分形象的。</p>
-
-<p>《学习GNU Emacs》（第二版）一书对“window”和“frame”的翻译与本教程刚好相反（分别译作“窗口”和“窗格”）。在此特别注明，以消除可能产生的疑惑。（感谢李旭章 <a href="mailto:lixuzhang@gmail.com">lixuzhang@gmail.com</a> 指出）</p>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">《学习GNU Emacs》（第二版）一书对“window”和“frame”的翻译与本教程刚好相反（分别译作“窗口”和“窗格”）。在此特别注明，以消除可能产生的疑惑。（感谢李旭章 &lt;lixuzhang@gmail.com&gt; 指出）</pre></td></tr></table>
+</div>
+</div>
 <p>[2] 对于“delete”和“kill”的区别，正文已经给出了详细的说明。“删除”和“移除”相比较起来，前者更多地隐含着“破坏”和“不可恢复”的意思，而后者更多地隐含着“被转移”和“可恢复”的意思。因此分别选择它们作为上述两词的译词，希望能够体现出区别。“yank”在中文文档中鲜有对应译词出现，翻译的困难较大。究其本意是：“a strong sudden pull”（参见韦氏词典），即“猛然拉回”。在原文档中 yank 被引申为“将先前移除的东西再移回来”这个意思，所以我们选择了“召回”一词与其对应。</p>
 
 <p>[3] “incremental”一词在计算机著作中广泛出现，被广泛接受的中文译词有两个：“增量的”和“渐进的”。“incremental search”翻译成“增量式搜索”或者“渐进式搜索”都讲得通，且都有各自的形象之处。还是参考原文对其的解释：“&hellip; means that the search happens while you type in the string to search for”。意思是之所以称其为“incremental search”，是因为“在你输入搜索字符串的过程中，搜索就已经在进行了”。我们认为“增量的”更加强调在现有基础上的变化（比如“增量备份”，“增量编译”）；而“渐进的”更加强调过程的逐渐发展，也更加符合原文的意思。因此我们选择将“incremental search”译作“渐进式搜索”。</p>
 
-<ul>
-<li>版权声明（COPYING）</li>
-</ul>
+<h2 id="版权声明-copying">版权声明（COPYING）</h2>
 
 <hr />
 
