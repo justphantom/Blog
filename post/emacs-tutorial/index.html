@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17457">
+<meta itemprop="wordCount" content="17469">
 
 
 
@@ -174,51 +174,24 @@
 
 <p>【注意：位于【】之间的内容是译注，比如本行，下同。】</p>
 
-<p>Emacs 键盘命令通常包含 <code>CONTROL</code> 键（有时候以 CTRL 或 CTL 来标示）和 <code>META</code> 键（有时候用 <code>EDIT</code> 或 <code>ALT</code> 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">C-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 CONTROL 键。
-        因此 C-f 就表示：按住 CONTROL 键再输入 f。
+<p>Emacs 键盘命令通常包含 <code>CONTROL</code> 键（有时候以 <code>CTRL</code> 或 <code>CTL</code> 来标示）和 <code>META</code> 键（有时候用 <code>EDIT</code> 或 <code>ALT</code> 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：
+| Key | Description |
+| :&mdash;| :&mdash; |
+| <code>C-&lt;chr&gt;</code> |表示当输入字符<code>&lt;chr&gt;</code> 时按住 <code>CONTROL</code> 键。 因此 <code>C-f</code> 就表示：按住 CONTROL 键再输入 <code>f</code>。 |
+| M-<chr> | 表示当输入字符<code>&lt;chr&gt;</code> 时按 <code>META</code> （或<code>EDIT</code>或 ALT）键。如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：先按一下 ESC 键然后放开，再输入 <chr>。我们用 <ESC> 来表示 ESC 键。 |</p>
 
-M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 ALT）键。
-        如果你的键盘上没有 META 、EDIT 或 ALT 键，用下述方法也等效：
-        先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。</pre></td></tr></table>
-</div>
-</div>
 <p>重要提示：要退出 Emacs，请用 <code>C-x C-c</code>（两个连续的组合键）。
 要退出一个正在运行中的命令，请用 <code>C-g</code>。
 下文中左边顶行的“&gt;&gt;”字样用来提示你尝试键盘命令。比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">现在输入 C-v （查看下一屏文字）移动到下一屏。
-（别紧张，在输入字符 v 的同时注意要按住 CONTROL 键）
-从现在开始，每读完当前一屏你都需要这样做一次。</pre></td></tr></table>
-</div>
-</div>
+
+<p>现在输入 <code>C-v</code> （查看下一屏文字）移动到下一屏。（别紧张，在输入字符 <code>v</code> 的同时注意要按住 <code>CONTROL</code> 键）从现在开始，每读完当前一屏你都需要这样做一次。</p>
+
 <p>值得注意的是，当你从上一屏滚到下一屏时，中间会有两行的重复；这样做是为了维持滚屏的连续性，方便你顺畅、连续地阅读。</p>
 
 <p>用编辑器，开门第一件事就是学会在文字中移动。你已经知道了 <code>C-v</code> 可以向下移动一屏，要往上移，请用 <code>M-v</code> （也就是按住 <code>META</code> 键，然后输入<code>v</code>，如果你没有 <code>META</code>、<code>EDIT</code> 或 <code>ALT</code> 键那么就先按 <code>&lt;ESC&gt;</code> 再按 <code>v</code>）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">试试 M-v，然后再试试 C-v，来回遛几次。</pre></td></tr></table>
-</div>
-</div>
+
+<p>试试 <code>M-v</code>，然后再试试 <code>C-v</code>，来回遛几次。</p>
+
 <h2 id="小结-summary">小结（SUMMARY）</h2>
 
 <hr />
