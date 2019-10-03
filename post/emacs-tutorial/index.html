@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17452">
+<meta itemprop="wordCount" content="17467">
 
 
 
@@ -1185,20 +1185,18 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">C-h a  相关命令搜索（Command Apropos）。
-       输入一个关键词然后 Emacs 会列出所有命令名中包含此关键词的命令。
-       这些命令全都可以用 M-x 来启动。
-       对于某些命令来说，相关命令搜索还会列出一两个组合键。</pre></td></tr></table>
-</div>
-</div>
-<blockquote>
-<blockquote>
-<p>输入 C-h a file &lt;Return&gt;。</p>
-</blockquote>
-</blockquote>
+<pre class="chroma">C-h a 相关命令搜索（Command Apropos）。
+      输入一个关键词然后 Emacs 会列出所有命令名中包含此关键词的命令。
+      这些命令全都可以用 M-x 来启动。
+      对于某些命令来说，相关命令搜索还会列出一两个组合键。
 
+输入 C-h a file &lt;Return&gt;。</pre></td></tr></table>
+</div>
+</div>
 <p>Emacs 会在另一个窗格里显示一个 M-x 命令列表，这个列表包含了所有名称中含有“file”的命令。你可以看到像“C-x C-f”这样的组合键显示在“find-file”这样的命令名的旁边。</p>
 
 <blockquote>
@@ -1260,103 +1258,46 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 你可以通过电子邮件直接联系维护者，也可以放到 GNU Emacs 的开发邮件列表或者水木社区的 Emacs 板上进行讨论。</p>
 
 <p>下面列出主要术语的译词对照，并给出注释说明：</p>
-
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th>释义</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>command</td>
-<td>命令</td>
-</tr>
-
-<tr>
-<td>cursor</td>
-<td>光标</td>
-</tr>
-
-<tr>
-<td>scrolling</td>
-<td>滚动</td>
-</tr>
-
-<tr>
-<td>numeric argument</td>
-<td>数字参数</td>
-</tr>
-
-<tr>
-<td>window</td>
-<td>窗格 [1]</td>
-</tr>
-
-<tr>
-<td>insert</td>
-<td>插入</td>
-</tr>
-
-<tr>
-<td>delete</td>
-<td>删除 [2]</td>
-</tr>
-
-<tr>
-<td>kill</td>
-<td>移除 [2]</td>
-</tr>
-
-<tr>
-<td>yank</td>
-<td>召回 [2]</td>
-</tr>
-
-<tr>
-<td>undo</td>
-<td>撤销</td>
-</tr>
-
-<tr>
-<td>file</td>
-<td>文件</td>
-</tr>
-
-<tr>
-<td>buffer</td>
-<td>缓冲区</td>
-</tr>
-
-<tr>
-<td>minibuffer</td>
-<td>小缓冲</td>
-</tr>
-
-<tr>
-<td>echo area</td>
-<td>回显区</td>
-</tr>
-
-<tr>
-<td>mode line</td>
-<td>状态栏</td>
-</tr>
-
-<tr>
-<td>search</td>
-<td>搜索</td>
-</tr>
-
-<tr>
-<td>incremental search</td>
-<td>渐进式搜索 [3]</td>
-</tr>
-</tbody>
-</table>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">command             命令 
+cursor              光标 
+scrolling           滚动 
+numeric argument      数字参数 
+window              窗格 [1] 
+insert              插入 
+delete              删除 [2] 
+kill                移除 [2] 
+yank                召回 [2] 
+undo                撤销 
+file                文件 
+buffer              缓冲区 
+minibuffer          小缓冲 
+echo area           回显区 
+mode line           状态栏 
+search              搜索 
+incremental search  渐进式搜索 [3] </pre></td></tr></table>
+</div>
+</div>
 <p>对于其他没有提到的术语，读者可以参考 Emacs 使用手册里的术语表。</p>
 
 <p>[1] “window”一词在计算机相关的领域一般都被译为“窗口”。但是在 Emacs中，还有一个“frame”的概念。在被广泛使用的 X 窗口系统和微软的视窗（Windows）系列操作系统中，Emacs 的一个“frame”就是一个“窗口”，因此把 Emacs 中的“frame”译成“窗口”更加符合通常的习惯。这样，Emacs中的“window”就只能译成“窗格”了。我们认为 Emacs 中 window 和
