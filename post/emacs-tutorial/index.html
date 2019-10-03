@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17467">
+<meta itemprop="wordCount" content="17454">
 
 
 
@@ -1258,46 +1258,103 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 你可以通过电子邮件直接联系维护者，也可以放到 GNU Emacs 的开发邮件列表或者水木社区的 Emacs 板上进行讨论。</p>
 
 <p>下面列出主要术语的译词对照，并给出注释说明：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">command             命令 
-cursor              光标 
-scrolling           滚动 
-numeric argument      数字参数 
-window              窗格 [1] 
-insert              插入 
-delete              删除 [2] 
-kill                移除 [2] 
-yank                召回 [2] 
-undo                撤销 
-file                文件 
-buffer              缓冲区 
-minibuffer          小缓冲 
-echo area           回显区 
-mode line           状态栏 
-search              搜索 
-incremental search  渐进式搜索 [3] </pre></td></tr></table>
-</div>
-</div>
+
+<table>
+<thead>
+<tr>
+<th align="left">术语</th>
+<th align="left">译词</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">command</td>
+<td align="left">命令</td>
+</tr>
+
+<tr>
+<td align="left">cursor</td>
+<td align="left">光标</td>
+</tr>
+
+<tr>
+<td align="left">scrolling</td>
+<td align="left">滚动</td>
+</tr>
+
+<tr>
+<td align="left">numeric argument</td>
+<td align="left">数字参数</td>
+</tr>
+
+<tr>
+<td align="left">window</td>
+<td align="left">窗格 [1]</td>
+</tr>
+
+<tr>
+<td align="left">insert</td>
+<td align="left">插入</td>
+</tr>
+
+<tr>
+<td align="left">delete</td>
+<td align="left">删除 [2]</td>
+</tr>
+
+<tr>
+<td align="left">kill</td>
+<td align="left">移除 [2]</td>
+</tr>
+
+<tr>
+<td align="left">yank</td>
+<td align="left">召回 [2]</td>
+</tr>
+
+<tr>
+<td align="left">undo</td>
+<td align="left">撤销</td>
+</tr>
+
+<tr>
+<td align="left">file</td>
+<td align="left">文件</td>
+</tr>
+
+<tr>
+<td align="left">buffer</td>
+<td align="left">缓冲区</td>
+</tr>
+
+<tr>
+<td align="left">minibuffer</td>
+<td align="left">小缓冲</td>
+</tr>
+
+<tr>
+<td align="left">echo area</td>
+<td align="left">回显区</td>
+</tr>
+
+<tr>
+<td align="left">mode line</td>
+<td align="left">状态栏</td>
+</tr>
+
+<tr>
+<td align="left">search</td>
+<td align="left">搜索</td>
+</tr>
+
+<tr>
+<td align="left">incremental search</td>
+<td align="left">渐进式搜索 [3]</td>
+</tr>
+</tbody>
+</table>
+
 <p>对于其他没有提到的术语，读者可以参考 Emacs 使用手册里的术语表。</p>
 
 <p>[1] “window”一词在计算机相关的领域一般都被译为“窗口”。但是在 Emacs中，还有一个“frame”的概念。在被广泛使用的 X 窗口系统和微软的视窗（Windows）系列操作系统中，Emacs 的一个“frame”就是一个“窗口”，因此把 Emacs 中的“frame”译成“窗口”更加符合通常的习惯。这样，Emacs中的“window”就只能译成“窗格”了。我们认为 Emacs 中 window 和
