@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17454">
+<meta itemprop="wordCount" content="17457">
 
 
 
@@ -174,7 +174,7 @@
 
 <p>【注意：位于【】之间的内容是译注，比如本行，下同。】</p>
 
-<p>Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META 键（有时候用 EDIT 或 ALT 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：</p>
+<p>Emacs 键盘命令通常包含 <code>CONTROL</code> 键（有时候以 CTRL 或 CTL 来标示）和 <code>META</code> 键（有时候用 <code>EDIT</code> 或 <code>ALT</code> 来标示）。为了避免每次都要写出全名，我们约定使用下述缩写：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -193,8 +193,8 @@ M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 AL
         先按一下 ESC 键然后放开，再输入 &lt;chr&gt;。我们用 &lt;ESC&gt; 来表示 ESC 键。</pre></td></tr></table>
 </div>
 </div>
-<p>重要提示：要退出 Emacs，请用 C-x C-c（两个连续的组合键）。
-要退出一个正在运行中的命令，请用 C-g。
+<p>重要提示：要退出 Emacs，请用 <code>C-x C-c</code>（两个连续的组合键）。
+要退出一个正在运行中的命令，请用 <code>C-g</code>。
 下文中左边顶行的“&gt;&gt;”字样用来提示你尝试键盘命令。比如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -210,7 +210,7 @@ M-&lt;chr&gt; 表示当输入字符 &lt;chr&gt; 时按住 META（或 EDIT 或 AL
 </div>
 <p>值得注意的是，当你从上一屏滚到下一屏时，中间会有两行的重复；这样做是为了维持滚屏的连续性，方便你顺畅、连续地阅读。</p>
 
-<p>用编辑器，开门第一件事就是学会在文字中移动。你已经知道了 C-v 可以向下移动一屏，要往上移，请用 M-v （也就是按住 META 键，然后输入v，如果你没有 META、EDIT 或 ALT 键那么就先按 &lt;ESC&gt; 再按 v）。</p>
+<p>用编辑器，开门第一件事就是学会在文字中移动。你已经知道了 <code>C-v</code> 可以向下移动一屏，要往上移，请用 <code>M-v</code> （也就是按住 <code>META</code> 键，然后输入<code>v</code>，如果你没有 <code>META</code>、<code>EDIT</code> 或 <code>ALT</code> 键那么就先按 <code>&lt;ESC&gt;</code> 再按 <code>v</code>）。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -243,9 +243,9 @@ C-l 重绘屏幕，并将光标所在行置于屏幕的中央
 </div>
 </div>
 <p>找找光标在哪里，你会发现其附近的文字与之前相同，位置却变为屏幕的中心。
-如果你再次输入 C-l ，附近的文字将移动到屏幕的顶端。再次输入 C-l ，文字将移动到底端。</p>
+如果你再次输入 <code>C-l</code> ，附近的文字将移动到屏幕的顶端。再次输入 <code>C-l</code> ，文字将移动到底端。</p>
 
-<p>如果你的键盘上有 PageUp 和 PageDn，也可以用这两个键来滚屏。不过使用 C-v 和 M-v 的效率要更高一些。</p>
+<p>如果你的键盘上有 <code>PageUp</code> 和 <code>PageDn</code>，也可以用这两个键来滚屏。不过使用 <code>C-v</code> 和 <code>M-v</code> 的效率要更高一些。</p>
 
 <h2 id="基本的光标控制-basic-cursor-control">基本的光标控制（BASIC CURSOR CONTROL）</h2>
 
@@ -253,7 +253,7 @@ C-l 重绘屏幕，并将光标所在行置于屏幕的中央
 
 <p>整屏的移动很有用，但是如何在文字中精确定位呢？</p>
 
-<p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 C-p 、 C-b 、 C-f 和 C-n 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
+<p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 <code>C-p</code> 、 <code>C-b</code> 、 <code>C-f</code> 和 <code>C-n</code> 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt"> 1
@@ -329,7 +329,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <pre class="chroma">用 C-n 将光标下移，一直越过屏幕边界，同时观察发生了什么变化。</pre></td></tr></table>
 </div>
 </div>
-<p>如果你嫌一个字符一个字符地挪光标太慢，你还可以一个词一个词地跳。M-f (META-f) 可以将光标往前移动一个词，而 M-b 则是往后移。【这里的“词”指英文单词，对中文来说，则是指移动到下一个标点符号。】</p>
+<p>如果你嫌一个字符一个字符地挪光标太慢，你还可以一个词一个词地跳。<code>M-f</code> (<code>META-f</code>) 可以将光标往前移动一个词，而 <code>M-b</code> 则是往后移。【这里的“词”指英文单词，对中文来说，则是指移动到下一个标点符号。】</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -338,7 +338,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <pre class="chroma">试试 M-f 和 M-b。</pre></td></tr></table>
 </div>
 </div>
-<p>如果光标停在一个词的中间，M-f 会移动到这个词的末尾。如果光标处于词与词之间的空白处，M-f 会移动到下一个词的末尾。M-b 的功能类似，只是方向相反。</p>
+<p>如果光标停在一个词的中间，<code>M-f</code> 会移动到这个词的末尾。如果光标处于词与词之间的空白处，<code>M-f</code> 会移动到下一个词的末尾。<code>M-b</code> 的功能类似，只是方向相反。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -347,20 +347,22 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <pre class="chroma">按几次 M-f 和 M-b，中间夹杂一些 C-f 和 C-b。</pre></td></tr></table>
 </div>
 </div>
-<p>你可以观察到 M-f 和 M-b 在不同位置上所表现出来的不同行为。</p>
+<p>你可以观察到 <code>M-f</code> 和 <code>M-b</code> 在不同位置上所表现出来的不同行为。</p>
 
-<p>请注意 C-f 、C-b 和 M-f 、M-b 两对之间的类比关系。通常的惯例是：META 系列组合键用来操作“由语言定义的单位（比如词、句子、段落）”，而 CONTROL 系列组合键用来操作“与语言无关的基本单位（比如字符、行等等）”。</p>
+<p>请注意 <code>C-f</code> 、<code>C-b</code> 和 <code>M-f</code> 、<code>M-b</code> 两对之间的类比关系。通常的惯例是：<code>META</code> 系列组合键用来操作“由语言定义的单位（比如词、句子、段落）”，而 <code>CONTROL</code> 系列组合键用来操作“与语言无关的基本单位（比如字符、行等等）”。</p>
 
-<p>类似的惯例在“行”与“句子”之间也同样适用：C-a 和 C-e 可以将光标移动到“一行”的头部和尾部；而 M-a 和 M-e 则将光标移动到“一句”的头部和尾部。</p>
-
-<blockquote>
-<blockquote>
-<p>按两次 C-a，再按两次 C-e。
-按两次 M-a，再按两次 M-e。</p>
-</blockquote>
-</blockquote>
-
-<p>想一想为什么重复的 C-a 命令会没有作用，而重复的 M-a 命令则会让光标不断地回退到上一个句子。虽然这个类比规律并不严格，但是很自然。</p>
+<p>类似的惯例在“行”与“句子”之间也同样适用：<code>C-a</code> 和 <code>C-e</code> 可以将光标移动到“一行”的头部和尾部；而 <code>M-a</code> 和 <code>M-e</code> 则将光标移动到“一句”的头部和尾部。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">按两次 C-a，再按两次 C-e。
+按两次 M-a，再按两次 M-e。</pre></td></tr></table>
+</div>
+</div>
+<p>想一想为什么重复的 <code>C-a</code> 命令会没有作用，而重复的 <code>M-a</code> 命令则会让光标不断地回退到上一个句子。虽然这个类比规律并不严格，但是很自然。</p>
 
 <p>光标停留的位置也可以称作“点位”（point）。或者干脆说，光标指示出了屏幕上“点位”在文本中的位置。</p>
 
@@ -405,15 +407,21 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </blockquote>
 </blockquote>
 
-<p>这里还要介绍两个重要的光标移动命令：M-&lt; （META 小于号）可以将光标移动到所有文字的最开头；M-&gt; （META 大于号）可以将光标移动到所有文字的最末尾。</p>
+<p>这里还要介绍两个重要的光标移动命令：<code>M-&lt;</code> （<code>META 小于号</code>）可以将光标移动到所有文字的最开头；<code>M-&gt;</code> （<code>META 大于号</code>）可以将光标移动到所有文字的最末尾。</p>
 
-<p>注意，在大部分键盘上，小于号（&lt;）需要用上档键（Shift）来输入，所以在这些键盘上你应该用 Shift 键来输入 M-&lt;，如果不按 Shift 键，你输入的会是 M-comma（META 逗号）。</p>
+<p>注意，在大部分键盘上，小于号（<code>&lt;</code>）需要用上档键（<code>Shift</code>）来输入，所以在这些键盘上你应该用 <code>Shift</code> 键来输入 <code>M-&lt;</code>，如果不按 <code>Shift</code> 键，你输入的会是 <code>M-comma</code>（<code>META 逗号</code>）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">试一试 M-&lt; ，移到本快速指南的最开始。</pre></td></tr></table>
+</div>
+</div>
+<p>然后再按几次 <code>C-v</code> 回到这里。</p>
 
 <blockquote>
 <blockquote>
-<p>试一试 M-&lt; ，移到本快速指南的最开始。
-然后再按几次 C-v 回到这里。</p>
-
 <p>试一试 M-&gt; ，移到本快速指南的最末尾。
 然后再按几次 M-v 回到这里。</p>
 </blockquote>
@@ -424,7 +432,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 2. 当你熟练使用 Emacs 之后，你会发现用这些组合键比用方向键要快得多，因为你的手不需要离开打字区。
 3. 一旦你习惯了使用这些组合键，你也可以很容易地适应其它更高级的光标移动命令。</p>
 
-<p>大部分的 Emacs 命令接受数字参数，并且对于多数命令而言，这些数字参数的作用是指定命令的重复次数。为一个命令指定数字参数（也就是重复次数）的方法是：先输入 C-u，然后输入数字作为参数，最后再输入命令。如果你有META （或 EDIT 或 ALT）键，那么还有另一种办法：按住 META 键不放，然后输入数字。不过我们还是建议你用 C-u，因为它在任何终端机上都能用。这种数字参数也称为“前缀参数”，意思是说这个参数是先于使用它的命令而输入的。</p>
+<p>大部分的 Emacs 命令接受数字参数，并且对于多数命令而言，这些数字参数的作用是指定命令的重复次数。为一个命令指定数字参数（也就是重复次数）的方法是：先输入 C-u，然后输入数字作为参数，最后再输入命令。如果你有META （或 EDIT 或 ALT）键，那么还有另一种办法：按住 <code>META</code> 键不放，然后输入数字。不过我们还是建议你用 C-u，因为它在任何终端机上都能用。这种数字参数也称为“前缀参数”，意思是说这个参数是先于使用它的命令而输入的。</p>
 
 <p>举例来说， C-u 8 C-f 会向前移动 8 个字符。</p>
 
@@ -834,7 +842,7 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <hr />
 
-<p>Emacs 的命令就像天上的星星，数也数不清。把它们都对应到 CONTROL 和 META 组合键上显然是不可能的。Emacs 用扩展（eXtend）命令来解决这个问题，扩展命令有两种风格：</p>
+<p>Emacs 的命令就像天上的星星，数也数不清。把它们都对应到 <code>CONTROL</code> 和 <code>META</code> 组合键上显然是不可能的。Emacs 用扩展（eXtend）命令来解决这个问题，扩展命令有两种风格：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -1019,7 +1027,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>在渐进式搜索中，按 &lt;DEL&gt; 会“撤回”到最近一次搜索的命中位置。如果之前没有一个命中， &lt;DEL&gt; 会抹去搜索字符串中的最后一个字符。比如你已经输入了“c”，光标就停在“c”第一次出现的位置，再输入“u”，光标停在“cu”第一次出现的位置，这时再按 &lt;DEL&gt; ，“u”就从搜索字串中消失了，然后光标会回到“c”第一次出现的位置。</p>
 
-<p>另外，如果你在搜索的时候输入了 control 或者 meta 组合键的话，搜索可能会结束。（也有例外，比如 C-s 和 C-r 这些用于搜索的命令。）</p>
+<p>另外，如果你在搜索的时候输入了 <code>CONTROL</code> 或者 meta 组合键的话，搜索可能会结束。（也有例外，比如 C-s 和 C-r 这些用于搜索的命令。）</p>
 
 <p>前面说的都是“向下”搜索，如果想“向上”搜索，可以用 C-r。C-r 与 C-s 相比除了搜索方向相反之外，其余的操作都一样。</p>
 
@@ -1037,7 +1045,7 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 这两个窗格里显示的都是本篇快速指南，而光标则停留在上方的窗格里。</p>
 
 <p>试试用 C-M-v 滚动下方的窗格。
-（如果你并没有 META 键，用 ESC C-v 也可以。）
+（如果你并没有 <code>META</code> 键，用 ESC C-v 也可以。）
 【向上滚动是 C-M-S-v，也就是同时按住 CONTROL、META 和 SHIFT 再按 v】</p>
 
 <p>输入 C-x o（“o”指的是“其它（other）”），
@@ -1055,9 +1063,9 @@ Notice how this line has changed: you&rsquo;ve replaced&hellip;</p>
 
 <p>当你在一个窗格中编辑，但用另一个窗格作为参考的时候，C-M-v 是很有用的命令。无需离开被选中的窗格，你就可以用 C-M-v 命令滚动另外一个窗格中的文字。【比如翻译和校对就很适合用这种方式进行。】</p>
 
-<p>C-M-v 是一个 CONTROL-META 组合键。如果你有 META （或 Alt）键的话，可以同时按住CONTROL 和 META 键并输入 v。CONTROL 和 META 键先按哪个都可以，因为它们只是用来“修饰（modify）”你输入的字符的。</p>
+<p>C-M-v 是一个 CONTROL-META 组合键。如果你有 <code>META</code> （或 Alt）键的话，可以同时按住CONTROL 和 <code>META</code> 键并输入 v。CONTROL 和 <code>META</code> 键先按哪个都可以，因为它们只是用来“修饰（modify）”你输入的字符的。</p>
 
-<p>如果你并没有 META 键，你也可以用 ESC 来代替，不过这样的话就要注意按键顺序了：你必须先输入 ESC ，然后再输入 CONTROL-v。CONTROL-ESC v 是没用的，因为 ESC 本身是一个字符键，而不是一个修饰键（modifier key）。</p>
+<p>如果你并没有 <code>META</code> 键，你也可以用 ESC 来代替，不过这样的话就要注意按键顺序了：你必须先输入 ESC ，然后再输入 CONTROL-v。CONTROL-ESC v 是没用的，因为 ESC 本身是一个字符键，而不是一个修饰键（modifier key）。</p>
 
 <blockquote>
 <blockquote>
