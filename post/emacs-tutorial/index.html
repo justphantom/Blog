@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17465">
+<meta itemprop="wordCount" content="17458">
 
 
 
@@ -214,24 +214,35 @@
 <hr />
 
 <p>以下命令在翻页浏览时相当有用：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">C-v 向前移动一屏
-M-v 向后移动一屏
-C-l 重绘屏幕，并将光标所在行置于屏幕的中央
-   （注意是 CONTROL-L，不是 CONTROL-1）
 
-找到光标，留意其附近的文字，然后输入 C-l。</pre></td></tr></table>
-</div>
-</div>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Desc</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>C-v</code></td>
+<td align="left">向前移动一屏</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-v</code></td>
+<td align="left">向后移动一屏</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-l</code></td>
+<td align="left">重绘屏幕，并将光标所在行置于屏幕的中央（注意是 CONTROL-L，不是 CONTROL-1）</td>
+</tr>
+</tbody>
+</table>
+
+<p>找到光标，留意其附近的文字，然后输入 <code>C-l</code>。</p>
+
 <p>找找光标在哪里，你会发现其附近的文字与之前相同，位置却变为屏幕的中心。
 如果你再次输入 <code>C-l</code> ，附近的文字将移动到屏幕的顶端。再次输入 <code>C-l</code> ，文字将移动到底端。</p>
 
@@ -246,16 +257,13 @@ C-l 重绘屏幕，并将光标所在行置于屏幕的中央
 <p>有几种方式可以选择。用方向键当然可以，不过更有效率的方法是保持双手位于主键盘区，然后使用 <code>C-p</code> 、 <code>C-b</code> 、 <code>C-f</code> 和 <code>C-n</code> 这四个命令。它们的功能和方向键是一样的，如下图所示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma">                上一行 C-p
@@ -264,12 +272,12 @@ C-l 重绘屏幕，并将光标所在行置于屏幕的中央
 向左移 C-b .... 目前光标位置 .... 向右移 C-f
                     :
                     :
-                下一行 C-n
+                下一行 C-n</pre></td></tr></table>
+</div>
+</div>
+<p>用 <code>C-n</code> 或 <code>C-p</code> 将光标移到上图的中央。
+按 <code>C-l</code>，整幅图会被显示在屏幕的中央。</p>
 
-用 C-n 或 C-p 将光标移到上图的中央。
-按 C-l，整幅图会被显示在屏幕的中央。</pre></td></tr></table>
-</div>
-</div>
 <p>“P N B F”四个字母分别代表了四个词，用这四个词记忆这些组合键会更容易：
 P 代表 previous（上一行），N 代表 next（下一行），B 代表backward（回退），而 F 则代表 forward（前进）。这些组合键今后将与你形影不离。</p>
 <div class="highlight"><div class="chroma">
