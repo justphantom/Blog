@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17446">
+<meta itemprop="wordCount" content="17431">
 
 
 
@@ -179,8 +179,8 @@
 <table>
 <thead>
 <tr>
-<th align="left">Key</th>
-<th align="left">Description</th>
+<th align="left">按键</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 
@@ -218,8 +218,8 @@
 <table>
 <thead>
 <tr>
-<th align="left">Key</th>
-<th align="left">Desc</th>
+<th align="left">按键</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 
@@ -280,86 +280,44 @@
 
 <p>“P N B F”四个字母分别代表了四个词，用这四个词记忆这些组合键会更容易：
 P 代表 previous（上一行），N 代表 next（下一行），B 代表backward（回退），而 F 则代表 forward（前进）。这些组合键今后将与你形影不离。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">按几次 C-n 把光标往下挪到这里。
 
-用 C-f 把光标移动到这一行，然后再用 C-p 往上挪。
-注意观察当光标在一行的中央时 C-p 命令的行为。</pre></td></tr></table>
-</div>
-</div>
+<p>按几次 <code>C-n</code> 把光标往下挪到这里。</p>
+
+<p>用 <code>C-f</code> 把光标移动到这一行，然后再用 <code>C-p</code> 往上挪。
+注意观察当光标在一行的中央时 <code>C-p</code> 命令的行为。</p>
+
 <p>每行文字都以一个“换行符”结束，“换行符”把行与行区分开来。（通常情况下，一个文件的最后一行会有一个换行符，但是 Emacs 不强制要求这一点。）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">在一行的行头输入 C-b。</pre></td></tr></table>
-</div>
-</div>
+
+<p>在一行的行头输入 <code>C-b</code>。</p>
+
 <p>光标应该会移动到前一行的行尾，因为光标在回退过程中越过了换行符。</p>
 
 <p>同样 <code>C-f</code> 也可以像 <code>C-b</code> 一样越过换行符。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">连按几次 C-b，感受一下光标的移动。
-然后按几次 C-f 回到本行的行尾。
-再按一次 C-f，光标会移动到下一行。</pre></td></tr></table>
-</div>
-</div>
+
+<p>连按几次 <code>C-b</code>，感受一下光标的移动。
+然后按几次 <code>C-f</code> 回到本行的行尾。
+再按一次 <code>C-f</code>，光标会移动到下一行。</p>
+
 <p>当你移动光标穿越屏幕的上下边界时，在边界外的文字会移动到屏幕内，这称为“滚动”（scrolling）。滚动使得光标可以被移动到文字中的任何位置，并且还不会让光标跑到屏幕外边去。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">用 C-n 将光标下移，一直越过屏幕边界，同时观察发生了什么变化。</pre></td></tr></table>
-</div>
-</div>
+
+<p>用 <code>C-n</code> 将光标下移，一直越过屏幕边界，同时观察发生了什么变化。</p>
+
 <p>如果你嫌一个字符一个字符地挪光标太慢，你还可以一个词一个词地跳。<code>M-f</code> (<code>META-f</code>) 可以将光标往前移动一个词，而 <code>M-b</code> 则是往后移。【这里的“词”指英文单词，对中文来说，则是指移动到下一个标点符号。】</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">试试 M-f 和 M-b。</pre></td></tr></table>
-</div>
-</div>
+
+<p>试试 <code>M-f</code> 和 <code>M-b</code>。</p>
+
 <p>如果光标停在一个词的中间，<code>M-f</code> 会移动到这个词的末尾。如果光标处于词与词之间的空白处，<code>M-f</code> 会移动到下一个词的末尾。<code>M-b</code> 的功能类似，只是方向相反。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">按几次 M-f 和 M-b，中间夹杂一些 C-f 和 C-b。</pre></td></tr></table>
-</div>
-</div>
-<p>你可以观察到 <code>M-f</code> 和 <code>M-b</code> 在不同位置上所表现出来的不同行为。</p>
+
+<p>按几次 <code>M-f</code> 和 <code>M-b</code>，中间夹杂一些 <code>C-f</code> 和 <code>C-b</code>。
+你可以观察到 <code>M-f</code> 和 <code>M-b</code> 在不同位置上所表现出来的不同行为。</p>
 
 <p>请注意 <code>C-f</code> 、<code>C-b</code> 和 <code>M-f</code> 、<code>M-b</code> 两对之间的类比关系。通常的惯例是：<code>META</code> 系列组合键用来操作“由语言定义的单位（比如词、句子、段落）”，而 <code>CONTROL</code> 系列组合键用来操作“与语言无关的基本单位（比如字符、行等等）”。</p>
 
 <p>类似的惯例在“行”与“句子”之间也同样适用：<code>C-a</code> 和 <code>C-e</code> 可以将光标移动到“一行”的头部和尾部；而 <code>M-a</code> 和 <code>M-e</code> 则将光标移动到“一句”的头部和尾部。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">按两次 C-a，再按两次 C-e。
-按两次 M-a，再按两次 M-e。</pre></td></tr></table>
-</div>
-</div>
+
+<p>按两次 <code>C-a</code>，再按两次 <code>C-e</code>。
+按两次 <code>M-a</code>，再按两次 <code>M-e</code>。</p>
+
 <p>想一想为什么重复的 <code>C-a</code> 命令会没有作用，而重复的 <code>M-a</code> 命令则会让光标不断地回退到上一个句子。虽然这个类比规律并不严格，但是很自然。</p>
 
 <p>光标停留的位置也可以称作“点位”（point）。或者干脆说，光标指示出了屏幕上“点位”在文本中的位置。</p>
@@ -369,8 +327,8 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <table>
 <thead>
 <tr>
-<th align="left">key</th>
-<th align="left">desc</th>
+<th align="left">按键</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 
@@ -427,58 +385,41 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 </tbody>
 </table>
 
-<blockquote>
-<blockquote>
 <p>把上面所有的命令都练习几次，这些可都是最常用的命令。</p>
-</blockquote>
-</blockquote>
 
 <p>这里还要介绍两个重要的光标移动命令：<code>M-&lt;</code> （<code>META 小于号</code>）可以将光标移动到所有文字的最开头；<code>M-&gt;</code> （<code>META 大于号</code>）可以将光标移动到所有文字的最末尾。</p>
 
 <p>注意，在大部分键盘上，小于号（<code>&lt;</code>）需要用上档键（<code>Shift</code>）来输入，所以在这些键盘上你应该用 <code>Shift</code> 键来输入 <code>M-&lt;</code>，如果不按 <code>Shift</code> 键，你输入的会是 <code>M-comma</code>（<code>META 逗号</code>）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">试一试 M-&lt; ，移到本快速指南的最开始。</pre></td></tr></table>
-</div>
-</div>
-<p>然后再按几次 <code>C-v</code> 回到这里。</p>
 
-<blockquote>
-<blockquote>
-<p>试一试 M-&gt; ，移到本快速指南的最末尾。
-然后再按几次 M-v 回到这里。</p>
-</blockquote>
-</blockquote>
+<p>试一试 <code>M-&lt;</code> ，移到本快速指南的最开始。
+然后再按几次 <code>C-v</code> 回到这里。</p>
 
-<p>如果你的键盘上有方向键的话，也可以用它们来移动光标。不过我们有三个理由推荐你学习 C-b 、C-f 、C-n 、和 C-p：
-1. 它们在任何键盘上都能用。
-2. 当你熟练使用 Emacs 之后，你会发现用这些组合键比用方向键要快得多，因为你的手不需要离开打字区。
-3. 一旦你习惯了使用这些组合键，你也可以很容易地适应其它更高级的光标移动命令。</p>
+<p>试一试 <code>M-&gt;</code> ，移到本快速指南的最末尾。
+然后再按几次 <code>M-v</code> 回到这里。</p>
 
-<p>大部分的 Emacs 命令接受数字参数，并且对于多数命令而言，这些数字参数的作用是指定命令的重复次数。为一个命令指定数字参数（也就是重复次数）的方法是：先输入 C-u，然后输入数字作为参数，最后再输入命令。如果你有META （或 EDIT 或 ALT）键，那么还有另一种办法：按住 <code>META</code> 键不放，然后输入数字。不过我们还是建议你用 C-u，因为它在任何终端机上都能用。这种数字参数也称为“前缀参数”，意思是说这个参数是先于使用它的命令而输入的。</p>
+<p>如果你的键盘上有方向键的话，也可以用它们来移动光标。不过我们有三个理由推荐你学习 <code>C-b</code> 、<code>C-f</code> 、<code>C-n</code> 、和 <code>C-p</code>：</p>
 
-<p>举例来说， C-u 8 C-f 会向前移动 8 个字符。</p>
+<ol>
+<li><p>它们在任何键盘上都能用。</p></li>
 
-<blockquote>
-<blockquote>
-<p>为 C-n 或者 C-p 指定一个数字参数，这样你可以只用一个命令就把光标移动到本行的附近。</p>
-</blockquote>
-</blockquote>
+<li><p>当你熟练使用 Emacs 之后，你会发现用这些组合键比用方向键要快得多，因为你的手不需要离开打字区。</p></li>
+
+<li><p>一旦你习惯了使用这些组合键，你也可以很容易地适应其它更高级的光标移动命令。</p></li>
+</ol>
+
+<p>大部分的 Emacs 命令接受数字参数，并且对于多数命令而言，这些数字参数的作用是指定命令的重复次数。为一个命令指定数字参数（也就是重复次数）的方法是：先输入 <code>C-u</code>，然后输入数字作为参数，最后再输入命令。如果你有<code>META</code> （或 <code>EDIT</code> 或 <code>ALT</code>）键，那么还有另一种办法：按住 <code>META</code> 键不放，然后输入数字。不过我们还是建议你用 <code>C-u</code>，因为它在任何终端机上都能用。这种数字参数也称为“前缀参数”，意思是说这个参数是先于使用它的命令而输入的。</p>
+
+<p>举例来说， <code>C-u 8 C-f</code> 会向前移动 8 个字符。</p>
+
+<p>为 <code>C-n</code> 或者 <code>C-p</code> 指定一个数字参数，这样你可以只用一个命令就把光标移动到本行的附近。</p>
 
 <p>虽然大部分命令把数字参数解释为其重复次数，但是也有些命令例外，它们将数字参数另做它用。比如有些命令（我们目前还没学到）仅仅将前缀参数作为一个标志――只要给出有一个前缀参数，不管其值为何，它都会改变命令的功能。</p>
 
-<p>而 C-v 和 M-v 则属于另一种类型的例外。当给定一个参数时，它们将滚动你指定的“行数”，而不是“屏数”。举例来说，C-u 8 C-v 将文本向下滚动 8 行。</p>
+<p>而 <code>C-v</code> 和 <code>M-v</code> 则属于另一种类型的例外。当给定一个参数时，它们将滚动你指定的“行数”，而不是“屏数”。举例来说，<code>C-u 8 C-v</code> 将文本向下滚动 8 行。</p>
 
-<blockquote>
-<blockquote>
-<p>现在试试看，输入 C-u 8 C-v。</p>
-</blockquote>
-</blockquote>
+<p>现在试试看，输入 <code>C-u 8 C-v</code>。</p>
 
-<p>这个命令应该已经将文字向上滚动了 8 行。如果你想将它再次地向下滚动，你可以给定一个参数然后执行 M-v。</p>
+<p>这个命令应该已经将文字向上滚动了 8 行。如果你想将它再次地向下滚动，你可以给定一个参数然后执行 <code>M-v</code>。</p>
 
 <p>如果你正在使用图形界面，比如 X 或者微软的 Windows，那么在 Emacs窗口的一边应该有一个长方形的区域叫“滚动条”。你可以用鼠标操纵滚动条来滚动文字。</p>
 
@@ -488,20 +429,16 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <hr />
 
-<p>如果 Emacs 对你的命令失去响应，你可以用 C-g 来安全地终止这条命令。C-g 也可以终止一条执行过久的命令。</p>
+<p>如果 Emacs 对你的命令失去响应，你可以用 <code>C-g</code> 来安全地终止这条命令。<code>C-g</code> 也可以终止一条执行过久的命令。</p>
 
-<p>C-g 还可以取消数字参数和只输入到一半的命令。</p>
+<p><code>C-g</code> 还可以取消数字参数和只输入到一半的命令。</p>
 
-<blockquote>
-<blockquote>
-<p>输入 C-u 100 设定一个值为 100 的数字参数，然后按 C-g。
-现在再按 C-f，光标应该只会移动一个字符，因为你已经用 C-g 取消了参数。</p>
-</blockquote>
-</blockquote>
+<p>输入 <code>C-u 100</code> 设定一个值为 100 的数字参数，然后按 <code>C-g</code>。
+现在再按 <code>C-f</code>，光标应该只会移动一个字符，因为你已经用 <code>C-g</code> 取消了参数。</p>
 
-<p>如果你不小心按了一下 &lt;ESC&gt;，你也可以用 C-g 来取消它。
-【这个说法似乎有问题，因为按照这个按键顺序输入的应该是 C-M-g。
-  取消 &lt;ESC&gt; 的正确做法是再连按两次 &lt;ESC&gt;。】</p>
+<p>如果你不小心按了一下 <code>&lt;ESC&gt;</code>，你也可以用 <code>C-g</code> 来取消它。
+【这个说法似乎有问题，因为按照这个按键顺序输入的应该是 <code>C-M-g</code>。
+取消 <code>&lt;ESC&gt;</code> 的正确做法是再连按两次 <code>&lt;ESC&gt;</code>。】</p>
 
 <h2 id="被禁用的命令-disabled-commands">被禁用的命令（DISABLED COMMANDS）</h2>
 
@@ -1231,35 +1168,15 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 输入 C-h a file &lt;Return&gt;。</pre></td></tr></table>
 </div>
 </div>
-<p>Emacs 会在另一个窗格里显示一个 M-x 命令列表，这个列表包含了所有名称中含有“file”的命令。你可以看到像“C-x C-f”这样的组合键显示在“find-file”这样的命令名的旁边。</p>
+<p>Emacs 会在另一个窗格里显示一个 <code>M-x</code> 命令列表，这个列表包含了所有名称中含有“<code>file</code>”的命令。你可以看到像“<code>C-x C-f</code>”这样的组合键显示在“<code>find-file</code>”这样的命令名的旁边。</p>
 
-<blockquote>
-<blockquote>
-<p>用 C-M-v 来回滚动 help 窗格，多试几次。</p>
+<p>用 <code>C-M-v</code> 来回滚动 <code>help</code> 窗格，多试几次。</p>
 
-<p>输入 C-x 1 来删除 help 窗格。</p>
-</blockquote>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">C-h i  阅读手册（也就是通常讲的 Info）。
-       这个命令会打开一个称为“*info*”的特殊缓冲区，在那里，
-       你可以阅读安装在系统里的软件包使用手册。
-       要读 Emacs 的使用手册，按 m emacs \&lt;Return&gt; 就可以了。
-       如果你之前从没用过 Info 系统，那么请按“?”，
-       Emacs 会带你进入 Info 的使用指南。
-       在看完本快速指南之后，Emacs Info 会成为你的主要参考文档。</pre></td></tr></table>
-</div>
-</div>
+<p>输入 <code>C-x 1</code> 来删除 <code>help</code> 窗格。</p>
+
+<p><code>C-h i</code>  阅读手册（也就是通常讲的 <code>Info</code>）。
+这个命令会打开一个称为“<code>*info*</code>”的特殊缓冲区，在那里，你可以阅读安装在系统里的软件包使用手册。要读 Emacs 的使用手册，按 <code>m emacs &lt;Return&gt;</code> 就可以了。如果你之前从没用过 <code>Info</code> 系统，那么请按“<code>?</code>”，Emacs 会带你进入 <code>Info</code> 的使用指南。在看完本快速指南之后，<code>Emacs Info</code> 会成为你的主要参考文档。</p>
+
 <h2 id="更多精彩-more-features">更多精彩（MORE FEATURES）</h2>
 
 <hr />
@@ -1276,7 +1193,7 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 
 <hr />
 
-<p>要退出 Emacs 请用 C-x C-c。</p>
+<p>要退出 Emacs 请用 <code>C-x C-c</code>。</p>
 
 <p>本文完全是为零起点新手所写的起步教程。如果你觉得哪里还看不明白，千万不要怀疑自己，那一定是我们没有写好。我们永远欢迎你的不满和抱怨。</p>
 
@@ -1393,14 +1310,11 @@ Emacs 会给出它所知道的所有有关“实现 C-p 命令功能的函数”
 
 <p>[1] “window”一词在计算机相关的领域一般都被译为“窗口”。但是在 Emacs中，还有一个“frame”的概念。在被广泛使用的 X 窗口系统和微软的视窗（Windows）系列操作系统中，Emacs 的一个“frame”就是一个“窗口”，因此把 Emacs 中的“frame”译成“窗口”更加符合通常的习惯。这样，Emacs中的“window”就只能译成“窗格”了。我们认为 Emacs 中 window 和
  frame 的关系用窗格和窗口来类比是十分形象的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">《学习GNU Emacs》（第二版）一书对“window”和“frame”的翻译与本教程刚好相反（分别译作“窗口”和“窗格”）。在此特别注明，以消除可能产生的疑惑。（感谢李旭章 &lt;lixuzhang@gmail.com&gt; 指出）</pre></td></tr></table>
-</div>
-</div>
+
+<blockquote>
+<p>《学习GNU Emacs》（第二版）一书对“window”和“frame”的翻译与本教程刚好相反（分别译作“窗口”和“窗格”）。在此特别注明，以消除可能产生的疑惑。（感谢李旭章 <a href="mailto:lixuzhang@gmail.com">lixuzhang@gmail.com</a> 指出）</p>
+</blockquote>
+
 <p>[2] 对于“delete”和“kill”的区别，正文已经给出了详细的说明。“删除”和“移除”相比较起来，前者更多地隐含着“破坏”和“不可恢复”的意思，而后者更多地隐含着“被转移”和“可恢复”的意思。因此分别选择它们作为上述两词的译词，希望能够体现出区别。“yank”在中文文档中鲜有对应译词出现，翻译的困难较大。究其本意是：“a strong sudden pull”（参见韦氏词典），即“猛然拉回”。在原文档中 yank 被引申为“将先前移除的东西再移回来”这个意思，所以我们选择了“召回”一词与其对应。</p>
 
 <p>[3] “incremental”一词在计算机著作中广泛出现，被广泛接受的中文译词有两个：“增量的”和“渐进的”。“incremental search”翻译成“增量式搜索”或者“渐进式搜索”都讲得通，且都有各自的形象之处。还是参考原文对其的解释：“&hellip; means that the search happens while you type in the string to search for”。意思是之所以称其为“incremental search”，是因为“在你输入搜索字符串的过程中，搜索就已经在进行了”。我们认为“增量的”更加强调在现有基础上的变化（比如“增量备份”，“增量编译”）；而“渐进的”更加强调过程的逐渐发展，也更加符合原文的意思。因此我们选择将“incremental search”译作“渐进式搜索”。</p>
