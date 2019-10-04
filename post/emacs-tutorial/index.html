@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17458">
+<meta itemprop="wordCount" content="17446">
 
 
 
@@ -236,7 +236,7 @@
 
 <tr>
 <td align="left"><code>C-l</code></td>
-<td align="left">重绘屏幕，并将光标所在行置于屏幕的中央（注意是 CONTROL-L，不是 CONTROL-1）</td>
+<td align="left">重绘屏幕，并将光标所在行置于屏幕的中央（注意是 <code>CONTROL-L</code>，不是 <code>CONTROL-1</code>）</td>
 </tr>
 </tbody>
 </table>
@@ -365,40 +365,68 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 <p>光标停留的位置也可以称作“点位”（point）。或者干脆说，光标指示出了屏幕上“点位”在文本中的位置。</p>
 
 <p>这里对简单的光标移动命令做一个总结，其中也包括了整词和整句的移动：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">    C-f 向右移动一个字符
-    C-b 向左移动一个字符
 
-    M-f 向右移动一个词【对中文是移动到下一个标点符号】
-    M-b 向左移动一个词【对中文是移动到上一个标点符号】
+<table>
+<thead>
+<tr>
+<th align="left">key</th>
+<th align="left">desc</th>
+</tr>
+</thead>
 
-    C-n 移动到下一行
-    C-p 移动到上一行
+<tbody>
+<tr>
+<td align="left"><code>C-f</code></td>
+<td align="left">向右移动一个字符</td>
+</tr>
 
-    C-a 移动到行首
-    C-e 移动到行尾
+<tr>
+<td align="left"><code>C-b</code></td>
+<td align="left">向左移动一个字符</td>
+</tr>
 
-    M-a 移动到句首
-    M-e 移动到句尾</pre></td></tr></table>
-</div>
-</div>
+<tr>
+<td align="left"><code>M-f</code></td>
+<td align="left">向右移动一个词【对中文是移动到下一个标点符号】</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-b</code></td>
+<td align="left">向左移动一个词【对中文是移动到上一个标点符号】</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-n</code></td>
+<td align="left">移动到下一行</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-p</code></td>
+<td align="left">移动到上一行</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-a</code></td>
+<td align="left">移动到行首</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-e</code></td>
+<td align="left">移动到行尾</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-a</code></td>
+<td align="left">移动到句首</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-e</code></td>
+<td align="left">移动到句尾</td>
+</tr>
+</tbody>
+</table>
+
 <blockquote>
 <blockquote>
 <p>把上面所有的命令都练习几次，这些可都是最常用的命令。</p>
