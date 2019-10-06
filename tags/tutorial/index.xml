@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Justphantom</title>
+    <link>https://justphantom.github.io/tags/tutorial/</link>
+    <description>Recent content in tutorial on Justphantom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Sep 2019 09:04:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://justphantom.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emacs Tutorial</title>
+      <link>https://justphantom.github.io/post/emacs-tutorial/</link>
+      <pubDate>Sat, 21 Sep 2019 09:04:33 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/emacs-tutorial/</guid>
+      <description>Emacs 快速指南 （查看版权声明请至本文末尾） 【注意：位于【】之间的内容是译注，比如本行，下同。】 Emacs 键盘命令通常包含 CONTROL 键（有时候以 CTRL 或 CTL 来标示）和 META</description>
+    </item>
+    
+  </channel>
+</rss>
