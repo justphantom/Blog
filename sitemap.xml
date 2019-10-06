@@ -23,7 +23,21 @@
   </url>
   
   <url>
+    <loc>https://justphantom.github.io/tags/emacs/</loc>
+    <lastmod>2019-09-21T09:04:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://justphantom.github.io/post/emacs-tutorial/</loc>
+    <lastmod>2019-09-21T09:04:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://justphantom.github.io/tags/</loc>
     <lastmod>2019-09-21T09:04:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -58,12 +72,6 @@
   
   <url>
     <loc>https://justphantom.github.io/org/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://justphantom.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

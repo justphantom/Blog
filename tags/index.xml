@@ -6,9 +6,19 @@
     <description>Recent content in Tags on Justphantom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Sep 2019 09:04:33 +0800</lastBuildDate>
     
 	<atom:link href="https://justphantom.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>emacs</title>
+      <link>https://justphantom.github.io/tags/emacs/</link>
+      <pubDate>Sat, 21 Sep 2019 09:04:33 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
