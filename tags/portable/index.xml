@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>portable on Justphantom</title>
+    <link>https://justphantom.github.io/tags/portable/</link>
+    <description>Recent content in portable on Justphantom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Sep 2019 10:51:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://justphantom.github.io/tags/portable/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>便携版 gVim</title>
+      <link>https://justphantom.github.io/post/portable-vim/</link>
+      <pubDate>Tue, 17 Sep 2019 10:51:30 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/portable-vim/</guid>
+      <description>下载gVim 访问 Vim 官网下载页面； 下载 GUI executable 压缩包，比如 gvim81.zip； 解压缩gVim 解压缩到本地路径，如 D:\Vim； 进入 D:\Vim 可以看到里面</description>
+    </item>
+    
+    <item>
+      <title>便携版 Emacs</title>
+      <link>https://justphantom.github.io/post/portable-emacs/</link>
+      <pubDate>Mon, 16 Sep 2019 17:48:30 +0800</pubDate>
+      
+      <guid>https://justphantom.github.io/post/portable-emacs/</guid>
+      <description>下载Emacs 访问 Emacs镜像FTP，选择对应的版本下载，如 emacs-26.3-x86_64。 解压缩 Emacs 将压缩包解压到本地路径，如 D:\E</description>
+    </item>
+    
+  </channel>
+</rss>

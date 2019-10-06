@@ -51,6 +51,20 @@
   </url>
   
   <url>
+    <loc>https://justphantom.github.io/tags/portable/</loc>
+    <lastmod>2019-09-17T10:51:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://justphantom.github.io/tags/vim/</loc>
+    <lastmod>2019-09-17T10:51:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://justphantom.github.io/post/portable-vim/</loc>
     <lastmod>2019-09-17T10:51:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
