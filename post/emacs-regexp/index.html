@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="JustPhantom" /><meta name="description" content="Emacs 正则表达式 (regular expression) regexp 1 2 3 M-x re-builer 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="JustPhantom" /><meta name="description" content="Emacs 正则表达式 (regular expression) regexp command description M-x re-builder 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个高" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="Emacs regular expression" />
-<meta property="og:description" content="Emacs 正则表达式 (regular expression) regexp 1 2 3 M-x re-builer 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个" />
+<meta property="og:description" content="Emacs 正则表达式 (regular expression) regexp command description M-x re-builder 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个高" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://justphantom.github.io/post/emacs-regexp/" />
 <meta property="article:published_time" content="2019-09-26T17:13:10+08:00" />
 <meta property="article:modified_time" content="2019-09-26T17:13:10+08:00" />
 <meta itemprop="name" content="Emacs regular expression">
-<meta itemprop="description" content="Emacs 正则表达式 (regular expression) regexp 1 2 3 M-x re-builer 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个">
+<meta itemprop="description" content="Emacs 正则表达式 (regular expression) regexp command description M-x re-builder 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个高">
 
 
 <meta itemprop="datePublished" content="2019-09-26T17:13:10&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-26T17:13:10&#43;08:00" />
-<meta itemprop="wordCount" content="3347">
+<meta itemprop="wordCount" content="3346">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="emacs," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs regular expression"/>
-<meta name="twitter:description" content="Emacs 正则表达式 (regular expression) regexp 1 2 3 M-x re-builer 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个"/>
+<meta name="twitter:description" content="Emacs 正则表达式 (regular expression) regexp command description M-x re-builder 手动生成正则表达式 M-x regexp-builder 同上,手动生成正则表达式 M-x regexp-opt 根据目标内容生成对应的正则表达式 可以利用 Emacs 的函数 exgrep-opt 自动生成一个高"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,27 +132,46 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#emacs-正则表达式-regular-expression-regexp">Emacs 正则表达式 (regular expression) regexp</a></li>
+</ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <ul>
-<li>Emacs 正则表达式 (regular expression) regexp</li>
-</ul>
+      
+
+<h1 id="emacs-正则表达式-regular-expression-regexp">Emacs 正则表达式 (regular expression) regexp</h1>
 
 <hr />
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">M-x re-builer       手动生成正则表达式
-M-x regexp-builder  同上,手动生成正则表达式
-M-x regexp-opt      根据目标内容生成对应的正则表达式</pre></td></tr></table>
-</div>
-</div>
+
+<table>
+<thead>
+<tr>
+<th align="left">command</th>
+<th align="left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>M-x re-builder</code></td>
+<td align="left">手动生成正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-x regexp-builder</code></td>
+<td align="left">同上,手动生成正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-x regexp-opt</code></td>
+<td align="left">根据目标内容生成对应的正则表达式</td>
+</tr>
+</tbody>
+</table>
+
 <p>可以利用 Emacs 的函数 exgrep-opt 自动生成一个高效的正则匹配表达式：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -372,7 +391,9 @@ smesf ijds  #101-22-33-23</p></li>
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/emacs/">emacs</a>
+          </div>
       <nav class="post-nav">
         
         <a class="next" href="/post/emacs-tutorial/">
