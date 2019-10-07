@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-26T17:13:10&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-26T17:13:10&#43;08:00" />
-<meta itemprop="wordCount" content="3346">
+<meta itemprop="wordCount" content="3408">
 
 
 
@@ -134,7 +134,11 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#emacs-正则表达式-regular-expression-regexp">Emacs 正则表达式 (regular expression) regexp</a></li>
+<li><a href="#emacs-正则表达式-regular-expression-regexp">Emacs 正则表达式 (regular expression) regexp</a>
+<ul>
+<li><a href="#特殊字符在emacs正则表达式中的含义">特殊字符在Emacs正则表达式中的含义</a></li>
+<li><a href="#产生附加的特殊结构">| 产生附加的特殊结构</a></li>
+</ul></li>
 </ul>
 </nav>
   </div>
@@ -173,100 +177,201 @@
 </table>
 
 <p>可以利用 Emacs 的函数 exgrep-opt 自动生成一个高效的正则匹配表达式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">(regexp-opt &#39;(&#34;foobar&#34; &#34;foobaz&#34; &#34;foo&#34;)) 按键 &#34;C-x C-e&#34; 在状态栏生成正则表达式
-(regexp-opt &#39;(&#34;foobar&#34; &#34;foobaz&#34; &#34;foo&#34;)) 按键 &#34;C-u C-x C-e&#34; 在当前光标处生成正则表达式
-(regexp-opt &#39;(&#34;foobar&#34; &#34;foobaz&#34; &#34;foo&#34;)) &#34;\(?:foo\(?:ba[rz]\)?\)&#34;
 
-C-h s    (describe-syntax)            显示在当前模式下的正则表达式规则描述
-C-x w h  (highlight-regext)           高亮显示正则表达式
-C-x w r  (unhighlight-regext)         取消高亮显示正则表达式
-M-x list-matching-lines               显示包含正则表达式的整行
-`\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}&#39; 显示包含IPv4格式地址的行</pre></td></tr></table>
-</div>
-</div>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>(regexp-opt '(&quot;foobar&quot; &quot;foobaz&quot; &quot;foo&quot;))</code></td>
+<td align="left">按键 &ldquo;<code>C-x C-e</code>&rdquo; 在状态栏生成正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>(regexp-opt '(&quot;foobar&quot; &quot;foobaz&quot; &quot;foo&quot;))</code></td>
+<td align="left">按键 &ldquo;<code>C-u C-x C-e</code>&rdquo; 在当前光标处生成正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>(regexp-opt '(&quot;foobar&quot; &quot;foobaz&quot; &quot;foo&quot;))</code></td>
+<td align="left">&ldquo;<code>\(?:foo\(?:ba[rz]\)?\)</code>&ldquo;</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-h s</code></td>
+<td align="left">(describe-syntax) 显示在当前模式下的正则表达式规则描述</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-x w h</code></td>
+<td align="left">(highlight-regext) 高亮显示正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>C-x w r</code></td>
+<td align="left">(unhighlight-regext) 取消高亮显示正则表达式</td>
+</tr>
+
+<tr>
+<td align="left"><code>M-x list-matching-lines</code></td>
+<td align="left">显示包含正则表达式的整行</td>
+</tr>
+
+<tr>
+<td align="left">&lsquo;<code>\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}</code>&lsquo;</td>
+<td align="left">显示包含IPv4格式地址的行</td>
+</tr>
+</tbody>
+</table>
+
 <p>注：在elisp代码中需要用2个反斜线\进行转义，而在minibuffer中输入时，只需要1个\进行转义在重复进行正则表达式操作时，可以直接用上、下光标按键，查看正则表达式的历史匹配记录。</p>
 
-<ul>
-<li>特殊字符在Emacs正则表达式中的含义</li>
-</ul>
+<h2 id="特殊字符在emacs正则表达式中的含义">特殊字符在Emacs正则表达式中的含义</h2>
 
 <hr />
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">&#34;.&#34;       匹配除了换行符之外任何单个字符的特殊字符。
-&#34;*&#34;       自身不构成表达式的部分，是个后缀操作符，表示某个前导表达式重复任意次。
-&#34;+&#34;       后缀操作符，与&#34;*&#34;作用相同。
-&#34;?&#34;       后缀操作符，与&#34;*&#34;作用相似，匹配前导表达式至多出现1次（0次或1次重复）
-&#34;?,+?,??&#34; 是前几个操作符的非贪心变体。正常的/+/?操作符是贪心的，只要总体上能够匹配，总是尽可能多的匹配。当有一个紧跟着?时就是非贪心：尽可能少的匹配。如：ab和ab?都能匹配a和abbbb，但同时多个匹配对象时，ab将匹配最长有效匹配abbbb，而ab?匹配最短有效匹配，仅匹配a。
 
+<table>
+<thead>
+<tr>
+<th align="left">String</th>
+<th align="left">Description</th>
+</tr>
+</thead>
 
-&#34;{N}&#34;     指定重复次数为N的后缀操作符，前导表达式匹配了N次。
-&#34;{N,M}&#34;   指定重复次数在N和M之间的后缀操作符，前导表达式至少匹配N次，但不超过M次。
-&#34;[ ... ]&#34; 字符集范围，以“［&#34;开始，以&#34;]&#34;结束，在两个方括号中间的字符就是这个集合能匹配的全部。可以用&#34;-&#34;放在开始字符与结束字符中间来指定匹配范围，如[a-z]匹配所有小写字母。字符集中的特殊字符：通常在字符集中的特殊字符不再特殊，但&#34;]&#34;, &#34;-&#34;, &#34;^&#34;情况特殊，如果想在集中包括&#34;]&#34;必须把它作为字符集中的第一个字符；想包括&#34;-&#34;必须把它作为字符集中的第一个或最后一个字符；想包括&#34;^&#34;必须把它放在除第一个字符以外的任何地方。
-&#34;1&#34;       表示补集合，即匹配的字符是除掉指定的字符外其它所有的字符，&#34;2&#34;表示匹配除ASCII字母和数字外的所有字符。
-&#34;^&#34;       仅匹配在文本中行首的那个空串的特殊字符
-&#34;$&#34;       仅匹配行尾的空串
-&#34;&#34;        引用特殊字符，包括&#34;&#34;,如&#34;&amp;dollar;&#34;, &#34;[&#34;；
-&#34;`&#34;       匹配空串，但仅是接在缓冲区的开始处的。
-&#34;&#39;&#34;       匹配空串，但仅是接在缓冲区的尾部的。
-&#34;=&#34;       匹配空串，但仅在&#34;点&#34;处的。
-&#34;b&#34;       匹配空串，但仅在一个词的开始或者结尾的，如&#34;bfoob&#34;匹配任何作为单独的词出现的foo；&#34;bballs?b&#34;匹配作为单独的词出现的ball或balls。
-&#34;B&#34;       匹配空串，但不在词的开始或结尾处。
-&#34;         匹配空串，但仅在词的开始处。仅当一个构成词的字符在缓冲区开始处时&#34;\
-&#34;&gt;&#34;       匹配空串，但仅在词的结尾处，仅当缓冲区尾部有构成词的字符时&#34;&gt;&#34;匹配缓冲区尾部的空串。
-“w&#34;       匹配任何构成词的字符，由语法表决定这些字符是什么。
-&#34;W&#34;       匹配任何非构成词的字符
-&#34;sC&#34;      匹配任何语法是C的字符，这里C是一个指定特定语法类的字符，如&#34;w&#34;为词的构成字符，&#34;-&#34;或&#34; &#34;为空白， &#34;.&#34;为普通标点符号。
-&#34;SC&#34;      匹配任何字符不属于语法C
-&#34;cC&#34;      匹配任何属于种类C的字符，如&#34;cc&#34;匹配汉字， &#34;cg&#34;匹配希腊字符，用M-x describe-categories或查看已知种类。
-&#34;CC&#34;      匹配所有不属于种类C的字符</pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li>| 产生附加的特殊结构</li>
-</ul>
+<tbody>
+<tr>
+<td align="left">&rdquo;.&rdquo;</td>
+<td align="left">匹配除了换行符之外任何单个字符的特殊字符。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;*&rdquo;</td>
+<td align="left">自身不构成表达式的部分，是个后缀操作符，表示某个前导表达式重复任意次。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;+&rdquo;</td>
+<td align="left">后缀操作符，与&rdquo;*&ldquo;作用相同。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;?&rdquo;</td>
+<td align="left">后缀操作符，与&rdquo;*&ldquo;作用相似，匹配前导表达式至多出现1次（0次或1次重复）</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;?,+?,??&rdquo;</td>
+<td align="left">是前几个操作符的非贪心变体。正常的/+/?操作符是贪心的，只要总体上能够匹配，总是尽可能多的匹配。当有一个紧跟着?时就是非贪心：尽可能少的匹配。如：ab和ab?都能匹配a和abbbb，但同时多个匹配对象时，ab将匹配最长有效匹配abbbb，而ab?匹配最短有效匹配，仅匹配a。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;{N}&rdquo;</td>
+<td align="left">指定重复次数为N的后缀操作符，前导表达式匹配了N次。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;{N,M}&rdquo;</td>
+<td align="left">指定重复次数在N和M之间的后缀操作符，前导表达式至少匹配N次，但不超过M次。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;[ &hellip; ]&rdquo;</td>
+<td align="left">字符集范围，以“［&rdquo;开始，以&rdquo;]&ldquo;结束，在两个方括号中间的字符就是这个集合能匹配的全部。可以用&rdquo;-&ldquo;放在开始字符与结束字符中间来指定匹配范围，如[a-z]匹配所有小写字母。字符集中的特殊字符：通常在字符集中的特殊字符不再特殊，但&rdquo;]&ldquo;, &ldquo;-&rdquo;, &ldquo;^&ldquo;情况特殊，如果想在集中包括&rdquo;]&ldquo;必须把它作为字符集中的第一个字符；想包括&rdquo;-&ldquo;必须把它作为字符集中的第一个或最后一个字符；想包括&rdquo;^&ldquo;必须把它放在除第一个字符以外的任何地方。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;1&rdquo;</td>
+<td align="left">表示补集合，即匹配的字符是除掉指定的字符外其它所有的字符，&rdquo;2&rdquo;表示匹配除ASCII字母和数字外的所有字符。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;^&rdquo;</td>
+<td align="left">仅匹配在文本中行首的那个空串的特殊字符</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;$&rdquo;</td>
+<td align="left">仅匹配行尾的空串</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;&rdquo;</td>
+<td align="left">引用特殊字符，包括&rdquo;&ldquo;,如&rdquo;&dollar;&rdquo;, &ldquo;[&ldquo;；</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;`&rdquo;</td>
+<td align="left">匹配空串，但仅是接在缓冲区的开始处的。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;&lsquo;&rdquo;</td>
+<td align="left">匹配空串，但仅是接在缓冲区的尾部的。</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;=&rdquo;</td>
+<td align="left">匹配空串，但仅在&rdquo;点&rdquo;处的。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;b&rdquo;</td>
+<td align="left">匹配空串，但仅在一个词的开始或者结尾的，如&rdquo;bfoob&rdquo;匹配任何作为单独的词出现的foo；&rdquo;bballs?b&rdquo;匹配作为单独的词出现的ball或balls。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;B&rdquo;</td>
+<td align="left">匹配空串，但不在词的开始或结尾处。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;</td>
+<td align="left">匹配空串，但仅在词的开始处。仅当一个构成词的字符在缓冲区开始处时&rdquo;|</td>
+</tr>
+
+<tr>
+<td align="left">&rdquo;&gt;&rdquo;</td>
+<td align="left">匹配空串，但仅在词的结尾处，仅当缓冲区尾部有构成词的字符时&rdquo;&gt;&ldquo;匹配缓冲区尾部的空串。</td>
+</tr>
+
+<tr>
+<td align="left">“w&rdquo;</td>
+<td align="left">匹配任何构成词的字符，由语法表决定这些字符是什么。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;W&rdquo;</td>
+<td align="left">匹配任何非构成词的字符</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;sC&rdquo;</td>
+<td align="left">匹配任何语法是C的字符，这里C是一个指定特定语法类的字符，如&rdquo;w&rdquo;为词的构成字符，&rdquo;-&ldquo;或&rdquo; &ldquo;为空白， &ldquo;.&ldquo;为普通标点符号。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;SC&rdquo;</td>
+<td align="left">匹配任何字符不属于语法C</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;cC&rdquo;</td>
+<td align="left">匹配任何属于种类C的字符，如&rdquo;cc&rdquo;匹配汉字， &ldquo;cg&rdquo;匹配希腊字符，用M-x describe-categories或查看已知种类。</td>
+</tr>
+
+<tr>
+<td align="left">&ldquo;CC&rdquo;</td>
+<td align="left">匹配所有不属于种类C的字符</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="产生附加的特殊结构">| 产生附加的特殊结构</h2>
 
 <hr />
 

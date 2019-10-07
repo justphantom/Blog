@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-21T09:04:33&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-21T09:04:33&#43;08:00" />
-<meta itemprop="wordCount" content="17431">
+<meta itemprop="wordCount" content="17430">
 
 
 
@@ -450,56 +450,39 @@ P 代表 previous（上一行），N 代表 next（下一行），B 代表backwa
 
 <p>如果你真的想用这条命令，在 Emacs 询问你的时候应该按空格。一般来说，如果你不想用，就按“n”。</p>
 
-<blockquote>
-<blockquote>
-<p>试试 C-x C-l （这是一个被禁用的命令）
-   然后用 n 来回答询问。</p>
-</blockquote>
-</blockquote>
+<p>试试 <code>C-x C-l</code> （这是一个被禁用的命令）
+然后用 <code>n</code> 来回答询问。</p>
 
 <h2 id="窗格-windows">窗格（WINDOWS）</h2>
 
 <hr />
 
 <p>Emacs 可以有多个“窗格”，每个窗格显示不同的文字。后面会介绍怎么对付多个窗格，现在我们先学会如何关掉多余的窗格。其实也很简单：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">    C-x 1   只保留一个窗格（也就是关掉其它所有窗格）。</pre></td></tr></table>
-</div>
-</div>
-<p>也就是先按 CONTROL-x 然后再按 1。C-x 1 会保留光标所在的窗格，并将其扩大到整个屏幕，同时关掉所有其它的窗格。</p>
 
-<blockquote>
-<blockquote>
-<p>把光标移到本行然后输入 C-u 0 C-l。</p>
+<p><code>C-x 1</code>   只保留一个窗格（也就是关掉其它所有窗格）。</p>
 
-<p>输入 C-h k C-f。观察当一个新窗格出现时当前窗格（用来显示 C-f 命令的文档）是如何缩小的。</p>
+<p>也就是先按 <code>CONTROL-x</code> 然后再按 <code>1</code>。<code>C-x 1</code> 会保留光标所在的窗格，并将其扩大到整个屏幕，同时关掉所有其它的窗格。</p>
 
-<p>输入 C-x 1 关掉文档窗格。</p>
-</blockquote>
-</blockquote>
+<p>把光标移到本行然后输入 <code>C-u 0 C-l</code>。</p>
 
-<p>有一系列命令是以 CONTROL-x 开始的，这些命令许多都跟“窗格、文件、缓冲区【缓冲区（buffer）会在后文详细介绍】”等等诸如此类的东西有关，其中有些命令可能包含了 2 个、3 个或者 4 个字符。</p>
+<p>输入 <code>C-h k C-f</code>。观察当一个新窗格出现时当前窗格（用来显示 <code>C-f</code> 命令的文档）是如何缩小的。</p>
+
+<p>输入 <code>C-x 1</code> 关掉文档窗格。</p>
+
+<p>有一系列命令是以 <code>CONTROL-x</code> 开始的，这些命令许多都跟“窗格、文件、缓冲区【缓冲区（buffer）会在后文详细介绍】”等等诸如此类的东西有关，其中有些命令可能包含了 2 个、3 个或者 4 个字符。</p>
 
 <h2 id="插入与删除-inserting-and-deleting">插入与删除（INSERTING AND DELETING）</h2>
 
 <hr />
 
-<p>插入文字很简单，直接敲键盘就可以了。普通的字符，比如 A、7、* 等等，会随着你的输入而插入。要插入一个换行符，输入 &lt;Return&gt;（这个键在键盘上有时会被标注成“Enter”）。</p>
+<p>插入文字很简单，直接敲键盘就可以了。普通的字符，比如 A、7、* 等等，会随着你的输入而插入。要插入一个换行符，输入 <code>&lt;Return&gt;</code>（这个键在键盘上有时会被标注成“<code>Enter</code>”）。</p>
 
-<p>你可以用 &lt;DEL&gt; 来删除光标左边的字符，这个键通常被标注为“Backspace”――跟你在 Emacs 之外的用法应该一样，删除最后一个输入的字符。</p>
+<p>你可以用 <code>&lt;DEL&gt;</code> 来删除光标左边的字符，这个键通常被标注为“<code>Backspace</code>”――跟你在 Emacs 之外的用法应该一样，删除最后一个输入的字符。</p>
 
-<p>你的键盘上可能有另外一个键，标注着 &lt;Delete&gt;，但那个不是我们所说的 &lt;DEL&gt;。</p>
+<p>你的键盘上可能有另外一个键，标注着 <code>&lt;Delete&gt;</code>，但那个不是我们所说的 <code>&lt;DEL&gt;</code>。</p>
 
-<blockquote>
-<blockquote>
-<p>现在就来试试――敲点字，然后按几下 &lt;DEL&gt; 删除它们。
+<p>现在就来试试――敲点字，然后按几下 <code>&lt;DEL&gt;</code> 删除它们。
 不用担心文件被修改，你做什么都没关系，这里就是专给你练习用的。</p>
-</blockquote>
-</blockquote>
 
 <p>如果一行文字很长、超出了窗格的宽度，显示不下的部分会在紧邻的下一行继续显示。如果你使用的是图形界面，文本区域两边的狭窄区域（左右“边缘”）会出现小小的转弯箭头，表明这是某一行的接续显示。如果你使用的是文本终端，接续显示由屏幕最右边一列的一个反斜线（“\”）来表示。</p>
 
