@@ -13,7 +13,7 @@
     <h1>Hello World!</h1>
     <hr>
     <script type="text/javascript">
-        var fs = requre("fs");
+        var fs = require("fs");
         var filebuffer = fs.readFileSync("/db/book.db");
         var config = {
             locateFile: filename => `/static/lib/js/sqljs/sql-wasm.wasm`
