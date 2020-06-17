@@ -14,13 +14,14 @@
     <hr>
     <div id="bookinfo"></div>
     <script>
-        $.getJSON("/json/book.json", "", function (data) {
-            $.each(data.first, function (i, item) {
-                var htmlText = "<p>" + item.Name + "</p>";
-                $("#bookinfo").append(htmlText);
-                console.log(htmlText);
-            });
-        });
+        $(function () {
+            $.getJSON("/json/book.json", "", function (data) {
+                $.each(data.first, function (i, item) {
+                    var htmlText = "<p>" + item.Name + "</p>";
+                    $("#bookinfo").append(htmlText);
+                    console.log(htmlText);
+                });
+            });});
     </script>
     <hr>
 </body>
