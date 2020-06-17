@@ -17,7 +17,7 @@
         $(function () {
             $.getJSON("/json/book.json", "", function (data) {
                 $.each(data, function (i, item) {
-                    var htmlText = "<p>" + item.Name + "</p>";
+                    var htmlText = "<p>" + item.Name + "(" + item.Author + ")" + "</p>";
                     $("#bookinfo").append(htmlText);
                     console.log(htmlText);
                 });
