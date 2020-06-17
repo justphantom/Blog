@@ -12,19 +12,24 @@
 <body>
     <h1>Hello World!</h1>
     <hr>
-    <script type="text/javascript">
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/db/book.db', true);
-        xhr.responseType = 'arraybuffer';
-        xhr.onload = function (e) {
-            var uInt8Array = new Uint8Array(this.response);
-            initSqlJs({ locateFile: filename => `/static/lib/js/sqljs/${filename}` }).then(function (SQL) {
-                var db = new SQL.Database(uInt8Array);
-                var contents = db.exec("SELECT * FROM bookinfo");
-            });
+    <script>
+        window.onload = function () {
+            var jsonUrl = "/json/book.json";
+            var xhr = new XMLHttpRequest();
+            xhr.open("get", jsonUrl);
+            xhr.send(null);
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    var jsonText = JSON.parse(xhr.responseText);
+                    for (var i = 0; i < jsonText.length; i++) {
+                        console.log(jsonText[i].Name);
+                    }
+                    console.log(jsonText);
+                }
+            };
         };
-        xhr.send();
     </script>
+    <hr>
 </body>
 
 </html>
