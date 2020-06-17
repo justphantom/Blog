@@ -13,20 +13,15 @@
     <h1>Hello World!</h1>
     <hr>
     <script type="text/javascript">
-        // var fs = require("fs");
-        // var filebuffer = fs.readFileSync("/db/book.db");
-        var config = {
-            locateFile: filename => `/static/lib/js/sqljs/${filename}`
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/db/book.db', true);
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function (e) {
+            var uInt8Array = new Uint8Array(this.response);
+            var db = new SQL.Database(uInt8Array);
+            var contents = db.exec("SELECT * FROM bookinfo");
         };
-        initSqlJs(config).then(function (SQL) {
-            var db = new SQL.Database();
-            var stmt = db.prepare("SELECT * FROM bookinfo");
-            stmt.getAsObject();
-            while (stmt.step()) {
-                var row = stmt.getAsObject();
-                console.log(JSON.stringify(row));
-            }
-        });
+        xhr.send();
     </script>
 </body>
 
