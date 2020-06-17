@@ -16,12 +16,13 @@
     <script>
         $(function () {
             $.getJSON("/json/book.json", "", function (data) {
-                $.each(data.first, function (i, item) {
+                $.each(data, function (i, item) {
                     var htmlText = "<p>" + item.Name + "</p>";
                     $("#bookinfo").append(htmlText);
                     console.log(htmlText);
                 });
-            });});
+            });
+        });
     </script>
     <hr>
 </body>
