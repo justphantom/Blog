@@ -13,15 +13,19 @@
     <h1>Hello World!</h1>
     <hr>
     <script type="text/javascript">
-        var fs = require("fs");
-        var filebuffer = fs.readFileSync("/db/book.db");
+        // var fs = require("fs");
+        // var filebuffer = fs.readFileSync("/db/book.db");
         var config = {
-            locateFile: filename => `/static/lib/js/sqljs/sql-wasm.wasm`
+            locateFile: filename => `/static/lib/js/sqljs/${filename}`
         };
-        initSqlJs(config).then(SQL => {
-            var db = new SQL.Database(filebuffer);
-            var res = db.exec("SELECT * FROM bookinfo");
-            console.log(JSON.stringify(res));
+        initSqlJs(config).then(function (SQL) {
+            var db = new SQL.Database();
+            var stmt = db.prepare("SELECT * FROM bookinfo");
+            stmt.getAsObject();
+            while (stmt.step()) {
+                var row = stmt.getAsObject();
+                console.log(JSON.stringify(row));
+            }
         });
     </script>
 </body>
